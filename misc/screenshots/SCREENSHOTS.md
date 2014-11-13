@@ -8,3 +8,12 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xblox.png)
 
+
+**Working on code online becomes a pleasure. We added ACE with its full features set like auto-completion!**
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/screenshot-1.jpg)
+
+Please browse the misc/screenshot folder for more!
+
+
+
