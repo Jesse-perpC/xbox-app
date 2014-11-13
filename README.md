@@ -1,8 +1,3 @@
----
-layout: default
-title: xbox-app/installation
----
-
 # Installation 
 
 ## Checkout 
