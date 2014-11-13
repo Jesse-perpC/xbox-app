@@ -3,9 +3,12 @@ PHP/JS based and full featured file manager
 
 #Features
  
- -Full keyboard support ala Midnight or Total-Commander
+ - Full keyboard support ala Midnight or Total-Commander
+ 
  -Multi tab
+ 
  -Code editor with auto-completion for CSS,PHP and Javascript
+ 
  -Multi selection
  -Advanced search
  -Drag’n drop for copy, move and upload into any panel
