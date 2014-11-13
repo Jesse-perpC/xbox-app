@@ -23,8 +23,8 @@ PHP/JS based and full featured file manager
  -Strong security using signed client call similar to oauth. You can limit the access to IP and domains
 
 #Screenshots
-![Flexible file panels, you can split them over and over again](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/screenshot-3.jpg)
 
+[See here] (misc/screenshots/SCREENSHOTS.md)
 
 
 #Important
