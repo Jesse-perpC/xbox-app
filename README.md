@@ -1,3 +1,10 @@
+PHP/JS based and full featured file manager
+===========================================
+
+#Important
+
+This a development version. It has many sub modules and needs around 1GB on the disc. You may download a pre-built version from here(@TODO add link) 
+
 # Installation 
 
 ## Checkout 
