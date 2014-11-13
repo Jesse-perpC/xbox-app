@@ -1,6 +1,6 @@
-[submodule "client/lib"]
-	path = client/lib
-	url = https://github.com/mc007/xjs.git
 [submodule "xapp"]
 	path = xapp
 	url = https://github.com/mc007/xphp.git
+[submodule "client/src"]
+	path = client/src
+	url = https://github.com/mc007/xjs.git
