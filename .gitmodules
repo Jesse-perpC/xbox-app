@@ -1,6 +1,7 @@
 [submodule "xapp"]
 	path = xapp
 	url = https://github.com/mc007/xphp.git
-[submodule "client/src"]
-	path = client/src
+
+[submodule "client"]
+	path = client
 	url = https://github.com/mc007/xjs.git
