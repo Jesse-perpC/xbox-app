@@ -169,10 +169,11 @@ $XF_CONFIG = array(
  * Run xfile with config above
  */
 require_once($XAPP_BASE_DIRECTORY . '/commander/App.php');
+
 $commanderStruct = xapp_commander_render_standalone(
     $XAPP_SITE_DIRECTORY.DIRECTORY_SEPARATOR.'xapp'.DIRECTORY_SEPARATOR,//xapp php directory
     'xbox',
-    $XAPP_SITE_DIRECTORY.DIRECTORY_SEPARATOR.'client'.DIRECTORY_SEPARATOR,//client abs directory
+    $XAPP_SITE_DIRECTORY.DIRECTORY_SEPARATOR.'client'.DIRECTORY_SEPARATOR .'src' . DIRECTORY_SEPARATOR,//client abs directory
     $XF_PATH,//the root folder to use
     '',//additional folder suffix (important to split it from above)
 	$XF_ALLOWED_UPLOAD_EXTENSIONS,
