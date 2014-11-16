@@ -96,7 +96,9 @@ This will create single layer file which contains all Dojo based in src/xfile/do
 ### Resources (Javascript/CSS/Fonts,...)
 
 Client-Debug version : see in client/src/lib/xbox/resources-debug.json
+
 Client-Release version : see in client/src/xfile/xbox/resources-release.json
+
 
 ### The Index.html 
 
@@ -107,12 +109,16 @@ needed to be managed in a more fashioned manner. However,
 the HEAD comes from:
 
 Client-Debug version : client/src/lib/xbox/Header.js
+
 Client-Release version : client/src/xfile/xbox/Header.js
+
 
 the BODY part comes from:
 
 Client-Debug version : client/src/lib/xbox/index.html
+
 Client-Release version : client/src/xfile/xbox/index.html
+
 
 
 
