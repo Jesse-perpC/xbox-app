@@ -45,7 +45,7 @@ Example urls
 $ROOT_DIRECTORY_ABSOLUTE = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 $XAPP_SITE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR;
 $XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'xapp' . DIRECTORY_SEPARATOR;
-
+//$XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR;
 
 $XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';     //Salt key to sign and verify client calls
 
@@ -163,7 +163,7 @@ $XF_CONFIG = array(
 /**
  * Run xfile with config above
  */
-require_once($XAPP_BASE_DIRECTORY . '/commander/App.php');
+require_once($XAPP_BASE_DIRECTORY . 'commander/App.php');
 
 $commanderStruct = xapp_commander_render_standalone(
     $XAPP_SITE_DIRECTORY.DIRECTORY_SEPARATOR.'xapp'.DIRECTORY_SEPARATOR,//xapp php directory

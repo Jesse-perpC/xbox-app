@@ -4,88 +4,88 @@
       "_containsChildrenIds": [
         "items"
       ],
-      "group": "On Load",
-      "id": "79b3451f-ebb4-be08-530c-ce0d7974cedd",
-      "event": "shift a",
-      "name": "On Key",
-      "reference": "",
-      "description": "Triggers when a keyboard sequence has been entered",
-      "declaredClass": "xblox.model.events.OnKey",
+      "condition": "[value1]=='PW'",
+      "parentId": "2f6520e3-5af6-39e0-eff3-f0b74310fba2",
+      "id": "adb7a3f4-c851-3be4-e6d2-d5d4994e538d",
+      "items": [
+        "eaa0cbea-ed8a-88a6-aa37-b54e65cc831d"
+      ],
+      "autoCreateElse": true,
+      "name": "if",
+      "declaredClass": "xblox.model.logic.IfBlock",
       "serializeMe": true,
+      "description": "No Description",
       "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0,
-      "items": [
-        "c9365903-4a61-35d5-8436-12760a0d43b7",
-        "581c317c-3c8d-1a39-cf7b-c1ea9983b5b4"
-      ]
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [
+        "owner"
+      ],
+      "name": "else",
+      "owner": "adb7a3f4-c851-3be4-e6d2-d5d4994e538d",
+      "dstField": "alternate",
+      "parentId": "2f6520e3-5af6-39e0-eff3-f0b74310fba2",
+      "id": "eaa0cbea-ed8a-88a6-aa37-b54e65cc831d",
+      "declaredClass": "xblox.model.Statement",
+      "serializeMe": true,
+      "description": "No Description",
+      "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
     },
     {
       "_containsChildrenIds": [
         "items"
       ],
-      "group": "On Load",
-      "id": "2f6520e3-5af6-39e0-eff3-f0b74310fba2",
-      "event": "shift l",
-      "name": "On Key",
-      "reference": "",
-      "description": "Triggers when a keyboard sequence has been entered",
-      "declaredClass": "xblox.model.events.OnKey",
-      "serializeMe": true,
-      "enabled": true,
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0,
-      "items": [
-        "c81e0505-14ff-8577-7ce2-e0097f629f48"
-      ]
-    },
-    {
-      "_containsChildrenIds": [],
       "parentId": "2f6520e3-5af6-39e0-eff3-f0b74310fba2",
-      "id": "c81e0505-14ff-8577-7ce2-e0097f629f48",
-      "reference": "{\"reference\":\"fileGridCell dgrid-row ui-state-default dojoDndItem\",\"mode\":\"bycss\"}",
-      "value": "width:3px;height:3px;",
-      "name": "Set Style",
-      "description": "Sets HTML Node Style Attribute",
-      "declaredClass": "xblox.model.html.SetStyle",
+      "id": "89cdee71-868a-3108-7017-67a461d86559",
+      "items": [
+        "d636ea05-98a2-f71e-1bef-45f13882973c",
+        "6129d5ad-8ccf-a5c9-8ae7-c5f272c58b78"
+      ],
+      "variable": "PowerState",
+      "name": "Switch",
+      "declaredClass": "xblox.model.SwitchBlock",
       "serializeMe": true,
+      "description": "No Description",
       "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0,
-      "mode": 5
+      "order": 0
     },
     {
       "_containsChildrenIds": [],
-      "id": "c9365903-4a61-35d5-8436-12760a0d43b7",
-      "reference": "{\"reference\":\"ui-state-default\",\"mode\":\"bycss\"}",
-      "value": "color:rgba(-10,-10,-10,0.1);",
-      "name": "Set Style",
-      "description": "Sets HTML Node Style Attribute",
-      "declaredClass": "xblox.model.html.SetStyle",
+      "comparator": "==",
+      "expression": "ON",
+      "id": "d636ea05-98a2-f71e-1bef-45f13882973c",
+      "parentId": "89cdee71-868a-3108-7017-67a461d86559",
+      "name": "Case",
+      "declaredClass": "xblox.model.logic.CaseBlock",
       "serializeMe": true,
+      "description": "No Description",
       "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0,
-      "mode": 4
+      "order": 0
     },
     {
       "_containsChildrenIds": [],
-      "id": "581c317c-3c8d-1a39-cf7b-c1ea9983b5b4",
-      "reference": "{\"reference\":\"fileGridCell dgrid-row ui-state-default dojoDndItem\",\"mode\":\"bycss\"}",
-      "value": "margin:1px",
-      "name": "Set Style",
-      "description": "Sets HTML Node Style Attribute",
-      "declaredClass": "xblox.model.html.SetStyle",
+      "comparator": "==",
+      "expression": "Standby",
+      "id": "6129d5ad-8ccf-a5c9-8ae7-c5f272c58b78",
+      "parentId": "89cdee71-868a-3108-7017-67a461d86559",
+      "name": "Case",
+      "declaredClass": "xblox.model.logic.CaseBlock",
       "serializeMe": true,
+      "description": "No Description",
       "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0,
-      "mode": 4
+      "order": 0
     }
   ],
   "variables": []
