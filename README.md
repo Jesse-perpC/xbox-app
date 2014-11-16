@@ -87,7 +87,8 @@ http://localhost/xbox-app/index.php?debug=true
 
 ### Update 
 
-1. git submodule foreach git pull origin master
+cd xbox-app
+git submodule foreach git pull origin master
 
 # Contribute
 
