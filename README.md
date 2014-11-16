@@ -33,16 +33,21 @@ This a development version. It has many sub modules and needs around 1GB on the 
 
 # Installation 
 
-## Checkout 
+## Soft Checkout (Uses pre-compiled Javascript version)
 
-1. git clone git --recursive https://github.com/mc007/xbox-app or : 
-2. git submodule update --init --recursive
+``` bash 
+    git clone https://github.com/mc007/xbox-app
+    cd xbox-app
+    git submodules init
+```
+
+## Full Checkout (Checks out full tree: 1GB+)
+
+``` bash 
+    git clone --recursive https://github.com/mc007/xbox-app    
+```
+
 
 ## Update 
 
 1. git submodule foreach git pull origin master
-
-# Contribute
-
-git commit -m "updated my submodule"
-git push
