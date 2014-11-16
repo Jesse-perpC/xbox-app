@@ -51,3 +51,8 @@ This a development version. It has many sub modules and needs around 1GB on the 
 ## Update 
 
 1. git submodule foreach git pull origin master
+
+# Contribute
+
+git commit -m "updated my submodule"
+git push
