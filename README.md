@@ -61,24 +61,23 @@ This a development version. It has many sub modules and needs around 1GB on the 
 ```
 
 ### Usage
+Navigate on your web server to : **http://localhost/xbox-app/index.php**
 
-Navigate on your web server to : http://localhost/xbox-app/index.php
+Open in different layout modes, append the entry URL by: 
 
-Open in different layout modes 
+index.php?**layout=single**: Single panel
 
-index.php?layout=single : Single panel
+index.php?**layout=dual**: Dual panel
 
-index.php?layout=dual : Dual panel
+index.php?**layout=preview**:  Preview layout (split view with media preview)
 
-index.php?layout=preview:  Preview layout (split view with media preview)
+index.php?**layout=preview&theme=dot-luv**: Preview layout in dark theme (split view with media preview)
 
-index.php?layout=preview&theme=dot-luv : Preview layout in dark theme (split view with media preview)
+index.php?**layout=preview&open=Pictures**: Auto open picture folder in preview mode (split view with media preview)
 
-index.php?layout=preview&open=Pictures : Auto open picture folder in preview mode (split view with media preview)
+index.php?**layout=gallery&open=BurningMan&minimal=true&theme=dot-luv**: Auto open picture folder in gallery mode (split view with cover flow view)
 
-index.php?layout=gallery&open=BurningMan&minimal=true&theme=dot-luv : Auto open picture folder in gallery mode (split view with cover flow view)
-
-index.php?layout=browser&open=Pictures : Auto open picture folder in browser mode (Dual view with tree for navigation, classics!)
+index.php?**layout=browser&open=Pictures**: Auto open picture folder in browser mode (Dual view with tree for navigation, classics!)
 
   
 ### Open debug version 
@@ -94,40 +93,43 @@ http://localhost/xbox-app/index.php?debug=true
 This will create single layer file which contains all Dojo based in src/xfile/dojo/xbox.js!
 
 ### Resources (Javascript/CSS/Fonts,...)
-
 Client-Debug version : see in client/src/lib/xbox/resources-debug.json
-
 Client-Release version : see in client/src/xfile/xbox/resources-release.json
 
-
-### The Index.html 
-
+### The Index.html
 There is no such thing! HTML related parts are pulled through the resource configuration mentioned in "Resources" above.
 This technique has been proven for us since many years in many projects as we develop authoring software and those resources
 needed to be managed in a more fashioned manner. However,
 
-the HEAD comes from:
-
+the **HEAD** comes from:
 Client-Debug version : client/src/lib/xbox/Header.js
-
 Client-Release version : client/src/xfile/xbox/Header.js
 
-
-the BODY part comes from:
-
+the **BODY** part comes from:
 Client-Debug version : client/src/lib/xbox/index.html
-
 Client-Release version : client/src/xfile/xbox/index.html
 
+### The index.php
+
+ 1. Is more of interest to you, it basically does setup a 'xfile' configuration and fires the PHP framework
+ 2. Handles RPC and client rendering
 
 
-
-### Update 
-
+### Update all
+``` bash
 cd xbox-app
 git submodule foreach git pull origin master
+```
 
-# Contribute
-
+### Contribute
 open a Github issue and let me know :-)
+
+###Roadmap
+1. Update to ibm-js framework
+2. remove all Dijit stuff
+3. Code cleanup
+4. Create a Node.js server version
+5. Add proper test units 
+6. ...
+
 
