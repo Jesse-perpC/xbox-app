@@ -85,6 +85,37 @@ index.php?layout=browser&open=Pictures : Auto open picture folder in browser mod
 
 http://localhost/xbox-app/index.php?debug=true
 
+### Build Javascript main file
+
+``` bash
+    cd client/src
+    sh buildstandalone.sh    
+```
+This will create single layer file which contains all Dojo based in src/xfile/dojo/xbox.js!
+
+### Resources (Javascript/CSS/Fonts,...)
+
+Client-Debug version : see in client/src/lib/xbox/resources-debug.json
+Client-Release version : see in client/src/xfile/xbox/resources-release.json
+
+### The Index.html 
+
+There is no such thing! HTML related parts are pulled through the resource configuration mentioned in "Resources" above.
+This technique has been proven for us since many years in many projects as we develop authoring software and those resources
+needed to be managed in a more fashioned manner. However,
+
+the HEAD comes from:
+
+Client-Debug version : client/src/lib/xbox/Header.js
+Client-Release version : client/src/xfile/xbox/Header.js
+
+the BODY part comes from:
+
+Client-Debug version : client/src/lib/xbox/index.html
+Client-Release version : client/src/xfile/xbox/index.html
+
+
+
 ### Update 
 
 cd xbox-app
