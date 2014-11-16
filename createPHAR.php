@@ -10,7 +10,8 @@ $phar = new Phar($buildRoot . "/xapp.phar",
 $phar->buildFromDirectory($srcRoot,'/.php$/');
 //$phar["common.php"] = file_get_contents($srcRoot . "/common.php");
 //$phar->setStub($phar->createDefaultStub("index.php"));
-$phar->createDefaultStub(file_get_contents(realpath($srcRoot . "../phar-stub.php")));
+//error_log('create path ' . realpath($srcRoot . '/../phar-stub.php'));
+$phar->createDefaultStub(file_get_contents(realpath($srcRoot . "/phar-stub.php")));
 
 
 //copy($srcRoot . "/config.ini", $buildRoot . "/config.ini");
