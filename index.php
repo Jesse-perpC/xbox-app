@@ -7,11 +7,6 @@
  */
 
 /***
- * This is a 100% Ajax-Application.
- *
- * Background:  This component is a very limited outtake of the umbrella project 'xide' which provides
- *              a plugable IDE for many systems and multiple purposes, open source with no bs attached.
- *
  *
  * Remarks  : - This file does UX rendering and handles/routes RPC calls
  *
@@ -21,11 +16,9 @@
  *            - see @link :http://localhost/xcom/index.php?view=rpc for the full service map. plugins are exposed through this entry point too
  *            - Plugins are exposed through the very same SMD based entry point too
 
- * Client   : - Is a large Dojo & XApp application which runs without iFrame.
- *            - Client resources are described in client/xfile/xbox
-
- * Context  : - Server & Client run each in the CMS context, plugins as well.
-
+ * Client   : - Is a large Dojo & XJS application.
+ *            - Client resources are described in client/xfile/xbox/resources-release.json
+ *
  * Security : - All RPC calls are signed upon its payload + md5(userName)=key + md5(sessionToken)=token
  *            - See component options to narrow it further for live stages.
  *            - See Xapp_Rpc_Gateway options, signing callbacks are possible as well
@@ -44,10 +37,7 @@ Example urls
 <a target="_blank" href="../index.php?layout=preview&theme=dot-luv">Preview layout in dark theme (split view with media preview)</a>
 <a target="_blank" href="../index.php?layout=preview&open=Pictures">Auto open picture folder in preview mode (split view with media preview)</a>
 <a target="_blank" href="../index.php?layout=single&minimal=true">Minimal (for mobile devices)</a>
-
-</ul>
- *
- */
+*/
 
 /***
  * BASE DIRECTORIES, don't touch !
@@ -57,11 +47,11 @@ $XAPP_SITE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR;
 $XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'xapp' . DIRECTORY_SEPARATOR;
 
 
-$XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';
+$XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';     //Salt key to sign and verify client calls
 
-define('XAPP_BASEDIR',$XAPP_BASE_DIRECTORY);
-define('_VALID_MOS',1);//bypass joomla php security
-define('_JEXEC',1);//bypass joomla php security
+define('XAPP_BASEDIR',$XAPP_BASE_DIRECTORY);    //the most important constant
+define('_VALID_MOS',1);                         //bypass joomla php security
+define('_JEXEC',1);                             //bypass joomla php security
 
 
 /////////////////////////////////////////////////////////////////
@@ -100,21 +90,26 @@ const XF_PANEL_MODE_COVER               =5;     //Image Cover Flow
 const XF_PANEL_MODE_SPLIT_VERTICAL      =6;     //Split Vertical
 const XF_PANEL_MODE_SPLIT_HORIZONTAL    =7;     //Split Horizontal
 
-const XF_LAYOUT_PRESET_DUAL     =1;     //Dual View ala Midnight commander or similar
-const XF_LAYOUT_PRESET_SINGLE   =2;     //Single View only
-
+const XF_LAYOUT_PRESET_DUAL             =1;     //Dual View ala Midnight commander or similar
+const XF_LAYOUT_PRESET_SINGLE           =2;     //Single View only
+const XF_LAYOUT_PRESET_BROWSER          =3;     //Classic Explorer like layout : left: tree, center : thumbs
+const XF_LAYOUT_PRESET_PREVIEW          =4;     //Split view : top : preview window, bottom : thumbs
+const XF_LAYOUT_PRESET_GALLERY          =5;     //Split view : top : image cover flow window, bottom : thumbs
 
 $XF_CONFIG = array(
 	"LAYOUT_PRESET" => XF_LAYOUT_PRESET_SINGLE,
 	"PANEL_OPTIONS" => array(
-		"ALLOW_NEW_TABS" => true,
-		"ALLOW_MULTI_TAB" => false,
-		"ALLOW_INFO_VIEW" => true,
-		"ALLOW_LOG_VIEW" => true,
-		"ALLOW_BREADCRUMBS" => true,
-		"ALLOW_CONTEXT_MENU" => true,
-		"ALLOW_LAYOUT_SELECTOR" => true,
-		"ALLOW_SOURCE_SELECTOR" => true
+		"ALLOW_NEW_TABS"        =>  true,
+		"ALLOW_MULTI_TAB"       =>  false,
+		"ALLOW_INFO_VIEW"       =>  true,
+		"ALLOW_LOG_VIEW"        =>  true,
+		"ALLOW_BREADCRUMBS"     =>  true,
+		"ALLOW_CONTEXT_MENU"    =>  true,
+		"ALLOW_LAYOUT_SELECTOR" =>  true,
+		"ALLOW_SOURCE_SELECTOR" =>  true,
+		"ALLOW_COLUMN_RESIZE"   =>  true,
+		"ALLOW_COLUMN_REORDER"  =>  true,
+		"ALLOW_COLUMN_HIDE"     =>  true
 	),
 
 	/**
