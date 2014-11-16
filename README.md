@@ -19,7 +19,7 @@ PHP/JS based and full featured file manager
  - Supports folder locations outside of the Apache http docs folder
  - Logging panel with filters
  - Over 20 themes for the file manager and 20 editor themes
- - Visual programming language for extending the plugin easier. Open blox.xblox example file.
+ - Visual programming language for extending the plugin easier. Open test/blox.xblox example file (this feature is pre alpha!)
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
 
 ##Status
