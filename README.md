@@ -96,6 +96,17 @@ This will create single layer file which contains all Dojo based in src/xfile/do
 - Client-Debug version : see in client/src/lib/xbox/resources-debug.json
 - Client-Release version : see in client/src/xfile/xbox/resources-release.json
 
+#### Footprint
+- Javascript total: 3MB (2MB Core + 1MB plugins) unzipped or 1.2 MB when gzipped
+- CSS total: 50KB
+- Images: 20KB - 50KB. We do optimize it further
+- XHR: 50KB for the initial load(gzipped)
+- Total: 1.4MB gzipped
+
+There are further optimizations in progress but we don't think we can get the minimal version below 700KB!
+
+
+
 ### The Index.html
 There is no such thing! HTML related parts are pulled through the resource configuration mentioned in "Resources" above.
 This technique has been proven for us since many years in many projects as we develop authoring software and those resources
