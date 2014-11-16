@@ -93,8 +93,8 @@ http://localhost/xbox-app/index.php?debug=true
 This will create single layer file which contains all Dojo based in src/xfile/dojo/xbox.js!
 
 ### Resources (Javascript/CSS/Fonts,...)
-Client-Debug version : see in client/src/lib/xbox/resources-debug.json
-Client-Release version : see in client/src/xfile/xbox/resources-release.json
+- Client-Debug version : see in client/src/lib/xbox/resources-debug.json
+- Client-Release version : see in client/src/xfile/xbox/resources-release.json
 
 ### The Index.html
 There is no such thing! HTML related parts are pulled through the resource configuration mentioned in "Resources" above.
