@@ -1,7 +1,7 @@
 PHP/JS based and full featured file manager
 ===========================================
 
-#Features
+##Features
  
  - Full keyboard support ala Midnight or Total-Commander 
  - Multi tab 
@@ -22,18 +22,22 @@ PHP/JS based and full featured file manager
  - Visual programming language for extending the plugin easier. Open blox.xblox example file.
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
 
-#Screenshots
+##Screenshots
 
 [See here] (misc/screenshots/SCREENSHOTS.md)
 
+##Demos
 
-#Important
+[See here a dedicated demo page] (http://pearls-media.com:89/demo)
+
+
+##Important
 
 This a development version. It has many sub modules and needs around 1GB on the disc. You may download a pre-built version from here(@TODO add link) 
 
-# Installation 
+## Installation 
 
-## Soft Checkout (Uses pre-compiled Javascript version)
+### Soft Checkout (Uses pre-compiled Javascript version)
 
 ``` bash 
     git clone https://github.com/mc007/xbox-app
@@ -41,14 +45,14 @@ This a development version. It has many sub modules and needs around 1GB on the 
     git submodules init
 ```
 
-## Full Checkout (Checks out full tree: 1GB+)
+### Full Checkout (Checks out full tree: 1GB+)
 
 ``` bash 
     git clone --recursive https://github.com/mc007/xbox-app    
 ```
 
 
-## Update 
+### Update 
 
 1. git submodule foreach git pull origin master
 
