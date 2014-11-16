@@ -22,6 +22,11 @@ PHP/JS based and full featured file manager
  - Visual programming language for extending the plugin easier. Open blox.xblox example file.
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
 
+##Status
+
+Little unstable! There is still a lot of old and rubbish code to be removed. However, this project is under active development and not yet official released.
+
+
 ##Screenshots
 
 [See here] (misc/screenshots/SCREENSHOTS.md)
@@ -34,6 +39,10 @@ PHP/JS based and full featured file manager
 ##Important
 
 This a development version. It has many sub modules and needs around 1GB on the disc. You may download a pre-built version from here(@TODO add link) 
+
+## Requirements 
+
+- PHP 5.3+ (better 5.4!)
 
 ## Installation 
 
@@ -51,6 +60,30 @@ This a development version. It has many sub modules and needs around 1GB on the 
     git clone --recursive https://github.com/mc007/xbox-app    
 ```
 
+### Usage
+
+Navigate on your web server to : http://localhost/xbox-app/index.php
+
+Open in different layout modes 
+
+index.php?layout=single : Single panel
+
+index.php?layout=dual : Dual panel
+
+index.php?layout=preview:  Preview layout (split view with media preview)
+
+index.php?layout=preview&theme=dot-luv : Preview layout in dark theme (split view with media preview)
+
+index.php?layout=preview&open=Pictures : Auto open picture folder in preview mode (split view with media preview)
+
+index.php?layout=gallery&open=BurningMan&minimal=true&theme=dot-luv : Auto open picture folder in gallery mode (split view with cover flow view)
+
+index.php?layout=browser&open=Pictures : Auto open picture folder in browser mode (Dual view with tree for navigation, classics!)
+
+  
+### Open debug version 
+
+http://localhost/xbox-app/index.php?debug=true
 
 ### Update 
 
@@ -58,5 +91,5 @@ This a development version. It has many sub modules and needs around 1GB on the 
 
 # Contribute
 
-git commit -m "updated my submodule"
-git push
+open a Github issue and let me know :-)
+
