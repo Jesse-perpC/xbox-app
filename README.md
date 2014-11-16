@@ -102,12 +102,13 @@ This technique has been proven for us since many years in many projects as we de
 needed to be managed in a more fashioned manner. However,
 
 the **HEAD** comes from:
-Client-Debug version : client/src/lib/xbox/Header.js
-Client-Release version : client/src/xfile/xbox/Header.js
+- Client-Debug version : client/src/lib/xbox/Header.js
+- Client-Release version : client/src/xfile/xbox/Header.js
 
 the **BODY** part comes from:
-Client-Debug version : client/src/lib/xbox/index.html
-Client-Release version : client/src/xfile/xbox/index.html
+
+- Client-Debug version : client/src/lib/xbox/index.html
+- Client-Release version : client/src/xfile/xbox/index.html
 
 ### The index.php
 
@@ -131,5 +132,3 @@ open a Github issue and let me know :-)
 4. Create a Node.js server version
 5. Add proper test units 
 6. ...
-
-
