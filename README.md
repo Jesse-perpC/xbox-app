@@ -46,6 +46,11 @@ This a development version. It has many sub modules and needs around 1GB on the 
 
 ## Installation 
 
+### Quick installation without any Git
+ 
+[See here] (docs/installation.md)
+
+
 ### Soft Checkout (Uses pre-compiled Javascript version)
 
 ``` bash 
