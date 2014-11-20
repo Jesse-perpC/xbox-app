@@ -177,6 +177,11 @@ rm -rf "$DIST/client/src/css/"
 rm -rf "$DIST/client/src/xfile/theme"
 rm -rf "$DIST/client/src/themes"
 rm -rf "$DIST/client/src/*.sh"
+rm -rf "$DIST/client/src/xfile/davinci"
+rm -rf "$DIST/client/src/xfile/orion"
+rm -rf "$DIST/client/src/xfile/system"
+rm -rf "$DIST/client/src/xfile/xide/ve"
+rm -rf "$DIST/client/src/xfile/davinci"
 
 
 
@@ -198,7 +203,6 @@ rm -rf "$DIST/xapp/lib/Nette"
 rm -rf "$DIST/xapp/.htaccess"
 rm -rf "$DIST/xapp/Doc"
 rm -rf "$DIST/xapp/xas"
-rm -rf "$DIST/xapp/Image"
 rm -rf "$DIST/xapp/Protocol"
 rm -rf "$DIST/xapp/Sync"
 rm -rf "$DIST/xapp/Tcp"
@@ -210,7 +214,6 @@ rm -rf "$DIST/xapp/tests"
 rm -rf "$DIST/xapp/lib/joomla"
 rm -rf "$DIST/xapp/lib/nette"
 rm -rf "$DIST/xapp/lib/League"
-rm -rf "$DIST/xapp/Image"
 rm -rf "$DIST/xapp/Build"
 rm -rf "$DIST/xapp/Protocol"
 rm -rf "$DIST/xapp/Sync"
@@ -219,6 +222,7 @@ rm -rf "$DIST/xapp/VFS/tests"
 rm -rf "$DIST/xapp/VFS/Doc"
 rm -rf "$DIST/xapp/lib/service"
 rm -rf "$DIST/xapp/xas/"
+rm -rf "$DIST/DIST/"
 rm -rf "$DIST/xapp/.htaccess"
 rm -rf "$DIST/site/views"
 rm -rf "$DIST/site/conf"
@@ -256,11 +260,6 @@ rm -rf "$DIST/xapp/VFS/vendor/symfony/yaml/Symfony/Component/Yaml/.git"
 rm -rf "$DIST/xapp/VFS/vendor/symfony/yaml/Symfony/Component/Yaml/Tests"
 rm -rf "$DIST/xapp/VFS/vendor/xapp/xflysystem/tests"
 rm -rf "$DIST/xapp/VFS/vendor/xapp/xflysystem/.git"
-
-
-
-
-
 
 
 mkdir "$DIST/logs"
