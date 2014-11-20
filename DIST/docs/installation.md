@@ -7,15 +7,23 @@ End-User-Manual
 1. Download from https://raw.githubusercontent.com/mc007/xbox-app/master/DIST/xbox.zip
 2. extract the zip on your in any folder
 3. Adjust permissions to 755 if needed
-4. Open http://localhost/xbox/
+4. Open http://localhost/xbox-app/
 
 ##Installation via Bash-Shell (Putty,...). This needs wget to be installed ! 
 ```bash
    mkdir xbox-app;cd xbox-app; wget --no-check-certificate "https://raw.githubusercontent.com/mc007/xbox-app/master/DIST/xbox.zip" -O temp.zip; unzip temp.zip; rm temp.zip; chmod -R 755 .
 ```
 
-The above downloads a zip into a new directory 'xbox-app' and un-compresses it and adjusts the permissions and deletes the zip!
- 
+##Installation via one-click installer
+
+1. Upload via FTP this file into any directory on your server https://raw.githubusercontent.com/mc007/xbox-app/master/install/remote/install.php
+2. Make the parent directory writeable (755)!
+3. Open the url http://mysite/install.php in your browser!
+4. wait !
+5. The installer downloaded https://raw.githubusercontent.com/mc007/xbox-app/master/DIST/xbox.zip and unzipped it in http://mysite/xbox-app/ by default
+6. Open http://localhost/xbox-xapp/ 
+7. Delete the install.php from your server!
+
 
 ##Configuration
  
