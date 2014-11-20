@@ -13,7 +13,6 @@ define('ROOT_PATH', $ROOT_DIR);
 
 $OPEN_URL = str_replace( getThisScriptFileName(), $DESTINATION_DIRECTORY_NAME . '/index.php' ,getUrl());
 
-
 /**
  * All private now!
  */
@@ -1691,7 +1690,7 @@ function _unzip_file_ziparchive($file, $to, $needed_dirs = array() ) {
 
 	// Create those directories if need be:
 	foreach ( $needed_dirs as $_dir ) {
-		if ( ! mkdir($_dir, FS_CHMOD_DIR) && ! is_dir($_dir) ) { // Only check to see if the Dir exists upon creation failure. Less I/O this way.
+		if (!file_exists($_dir) && !mkdir($_dir, FS_CHMOD_DIR) && ! is_dir($_dir) ) { // Only check to see if the Dir exists upon creation failure. Less I/O this way.
 			//error_log('mkdir_failed_ziparchive', ('Could not create directory.'), substr($_dir, strlen($to)));
 			//return new XApp_Error('mkdir_failed_ziparchive', ('Could not create directory.'), substr($_dir, strlen($to)));
 		}
@@ -1867,19 +1866,22 @@ function unzip_file($file, $to) {
 	return $res;
 }
 
-$downloaded  = download_url($FULL_ZIP);
+//$downloaded  = download_url($FULL_ZIP);
+$downloaded  = '/tmp/xbox.tmp';
 
 if(file_exists($downloaded)){
 
-	@mkdir($DESTINATION_DIRECTORY,755,true);
+	@mkdir($DESTINATION_DIRECTORY,0777,true);
 	unzip_file($downloaded,$DESTINATION_DIRECTORY);
+
 	echo('deleting ' . $downloaded .  '<br/>');
-	@unlink($downloaded);
+	//@unlink($downloaded);
 	if(file_exists($DESTINATION_DIRECTORY . DIRECTORY_SEPARATOR . 'index.php')){
 		echo('install success! You can open it now '. '<br/>');
 		sleep(5);
 		if($AUTO_OPEN){
-			echo('redirect to <a href=\"' . $OPEN_URL . '\">' . $OPEN_URL .'</a><br/>');
+			ob_start();
+			echo('redirect to <a href="' . $OPEN_URL .'">' . $OPEN_URL .'</a><br/>');
 			sleep(2);
 			ob_flush();
 			flush();
