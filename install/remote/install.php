@@ -1875,7 +1875,7 @@ if(file_exists($downloaded)){
 	unzip_file($downloaded,$DESTINATION_DIRECTORY);
 
 	echo('deleting ' . $downloaded .  '<br/>');
-	//@unlink($downloaded);
+	@unlink($downloaded);
 	if(file_exists($DESTINATION_DIRECTORY . DIRECTORY_SEPARATOR . 'index.php')){
 		echo('install success! You can open it now '. '<br/>');
 		sleep(5);
