@@ -21,7 +21,10 @@ PHP/JS based and full featured file manager
  - Over 20 themes for the file manager and 20 editor themes
  - Visual programming language for extending the plugin easier. Open test/blox.xblox example file (this feature is pre alpha!)
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
-
+ - Thumb resizing and caching for fast browsing large image folders 
+ - quite some stuff which i am too lazy to write down
+ 
+ 
 ##Status
 
 Little unstable! There is still a lot of old and rubbish code to be removed. However, this project is under active development and not yet official released.
