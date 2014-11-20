@@ -1866,8 +1866,8 @@ function unzip_file($file, $to) {
 	return $res;
 }
 
-//$downloaded  = download_url($FULL_ZIP);
-$downloaded  = '/tmp/xbox.tmp';
+$downloaded  = download_url($FULL_ZIP);
+//$downloaded  = '/tmp/xbox.tmp';
 
 if(file_exists($downloaded)){
 
