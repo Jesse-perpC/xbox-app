@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>xbox-app by mc007</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>xbox-app</h1>
+        <p>PHP/JS based file manager. This repo is intented for developing purpose only!</p>
+        <p class="view"><a href="https://github.com/mc007/xbox-app">View the Project on GitHub <small>mc007/xbox-app</small></a></p>
+        <ul>
+          <li><a href="https://github.com/mc007/xbox-app/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mc007/xbox-app/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mc007/xbox-app">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="phpjs-based-and-full-featured-file-manager" class="anchor" href="#phpjs-based-and-full-featured-file-manager" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP/JS based and full featured file manager</h1>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Full keyboard support ala Midnight or Total-Commander </li>
+<li>Multi tab </li>
+<li>Code editor with auto-completion for CSS,PHP and Javascript </li>
+<li>Multi selection</li>
+<li>Advanced search</li>
+<li>Drag’n drop for copy, move and upload into any panel</li>
+<li>Standard actions : Edit, Move, Rename, Info, Delete,Compress and Download</li>
+<li>2 image editors : Pixlr and Aviary</li>
+<li>Javascript &amp; Bash Shell</li>
+<li>Built- in Javascript and Bash shell</li>
+<li>Basic support for SFTP, FTP, WEBDAV, DROPBOX</li>
+<li>4 display modes for file panels : thumbnails, tree, list, preview, split horizontal and split vertical</li>
+<li>3 main layouts : Dual panel, single panel and ‘preview’, ideal for media browsing</li>
+<li>Supports folder locations outside of the Apache http docs folder</li>
+<li>Logging panel with filters</li>
+<li>Over 20 themes for the file manager and 20 editor themes</li>
+<li>Visual programming language for extending the plugin easier. Open test/blox.xblox example file (this feature is pre alpha!)</li>
+<li>Strong security using signed client call similar to oauth. You can limit the access to IP and domains</li>
+</ul>
+
+<h2>
+<a id="status" class="anchor" href="#status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Status</h2>
+
+<p>Little unstable! There is still a lot of old and rubbish code to be removed. However, this project is under active development and not yet official released.</p>
+
+<h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<p><a href="misc/screenshots/SCREENSHOTS.md">See here</a></p>
+
+<h2>
+<a id="demos" class="anchor" href="#demos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demos</h2>
+
+<p><a href="http://pearls-media.com:89/demo">See here a dedicated demo page</a></p>
+
+<h2>
+<a id="important" class="anchor" href="#important" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important</h2>
+
+<p>This a development version. It has many sub modules and needs around 1GB on the disc. You may download a pre-built version from here(<a href="https://github.com/TODO" class="user-mention">@TODO</a> add link) </p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>PHP 5.3+ (better 5.4!)</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="quick-installation-without-any-git" class="anchor" href="#quick-installation-without-any-git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick installation without any Git</h3>
+
+<p><a href="docs/installation.md">See here</a></p>
+
+<h3>
+<a id="soft-checkout-uses-pre-compiled-javascript-version" class="anchor" href="#soft-checkout-uses-pre-compiled-javascript-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Soft Checkout (Uses pre-compiled Javascript version)</h3>
+
+<div class="highlight highlight-bash"><pre>    git clone https://github.com/mc007/xbox-app
+    <span class="pl-s3">cd</span> xbox-app
+    git submodules init</pre></div>
+
+<h3>
+<a id="full-checkout-checks-out-full-tree-1gb" class="anchor" href="#full-checkout-checks-out-full-tree-1gb" aria-hidden="true"><span class="octicon octicon-link"></span></a>Full Checkout (Checks out full tree: 1GB+)</h3>
+
+<div class="highlight highlight-bash"><pre>    git clone --recursive https://github.com/mc007/xbox-app    </pre></div>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Navigate on your web server to : <strong>http://localhost/xbox-app/index.php</strong></p>
+
+<p>Open in different layout modes, append the entry URL by: </p>
+
+<p>index.php?<strong>layout=single</strong>: Single panel</p>
+
+<p>index.php?<strong>layout=dual</strong>: Dual panel</p>
+
+<p>index.php?<strong>layout=preview</strong>:  Preview layout (split view with media preview)</p>
+
+<p>index.php?<strong>layout=preview&amp;theme=dot-luv</strong>: Preview layout in dark theme (split view with media preview)</p>
+
+<p>index.php?<strong>layout=preview&amp;open=Pictures</strong>: Auto open picture folder in preview mode (split view with media preview)</p>
+
+<p>index.php?<strong>layout=gallery&amp;open=BurningMan&amp;minimal=true&amp;theme=dot-luv</strong>: Auto open picture folder in gallery mode (split view with cover flow view)</p>
+
+<p>index.php?<strong>layout=browser&amp;open=Pictures</strong>: Auto open picture folder in browser mode (Dual view with tree for navigation, classics!)</p>
+
+<h3>
+<a id="open-debug-version" class="anchor" href="#open-debug-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Open debug version</h3>
+
+<p>http://localhost/xbox-app/index.php?debug=true</p>
+
+<h3>
+<a id="build-javascript-main-file" class="anchor" href="#build-javascript-main-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build Javascript main file</h3>
+
+<div class="highlight highlight-bash"><pre>    <span class="pl-s3">cd</span> client/src
+    sh buildstandalone.sh    </pre></div>
+
+<p>This will create single layer file which contains all Dojo based in src/xfile/dojo/xbox.js!</p>
+
+<h3>
+<a id="resources-javascriptcssfonts" class="anchor" href="#resources-javascriptcssfonts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources (Javascript/CSS/Fonts,...)</h3>
+
+<ul>
+<li>Client-Debug version : see in client/src/lib/xbox/resources-debug.json</li>
+<li>Client-Release version : see in client/src/xfile/xbox/resources-release.json</li>
+</ul>
+
+<h4>
+<a id="footprint" class="anchor" href="#footprint" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footprint</h4>
+
+<ul>
+<li>Javascript total: 3MB (2MB Core + 1MB plugins) unzipped or 1.2 MB when gzipped</li>
+<li>CSS total: 50KB</li>
+<li>Images: 20KB - 50KB. We do optimize it further</li>
+<li>XHR: 50KB for the initial load(gzipped)</li>
+<li>Total: 1.4MB gzipped</li>
+</ul>
+
+<p>There are further optimizations in progress but we don't think we can get the minimal version below 700KB!</p>
+
+<h3>
+<a id="the-indexhtml" class="anchor" href="#the-indexhtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Index.html</h3>
+
+<p>There is no such thing! HTML related parts are pulled through the resource configuration mentioned in "Resources" above.
+This technique has been proven for us since many years in many projects as we develop authoring software and those resources
+needed to be managed in a more fashioned manner. However,</p>
+
+<p>the <strong>HEAD</strong> comes from:</p>
+
+<ul>
+<li>Client-Debug version : client/src/lib/xbox/Header.js</li>
+<li>Client-Release version : client/src/xfile/xbox/Header.js</li>
+</ul>
+
+<p>the <strong>BODY</strong> part comes from:</p>
+
+<ul>
+<li>Client-Debug version : client/src/lib/xbox/index.html</li>
+<li>Client-Release version : client/src/xfile/xbox/index.html</li>
+</ul>
+
+<h3>
+<a id="the-indexphp" class="anchor" href="#the-indexphp" aria-hidden="true"><span class="octicon octicon-link"></span></a>The index.php</h3>
+
+<ol>
+<li>Is more of interest to you, it basically does setup a 'xfile' configuration and fires the PHP framework</li>
+<li>Handles RPC and client rendering</li>
+</ol>
+
+<h3>
+<a id="update-all" class="anchor" href="#update-all" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update all</h3>
+
+<div class="highlight highlight-bash"><pre><span class="pl-s3">cd</span> xbox-app
+git submodule foreach git pull origin master</pre></div>
+
+<h3>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h3>
+
+<p>open a Github issue and let me know :-)</p>
+
+<h3>
+<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap</h3>
+
+<ol>
+<li>Update to ibm-js framework</li>
+<li>remove all Dijit stuff</li>
+<li>Code cleanup</li>
+<li>Create a Node.js server version</li>
+<li>Add proper test units </li>
+<li>...</li>
+</ol>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/mc007">mc007</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
