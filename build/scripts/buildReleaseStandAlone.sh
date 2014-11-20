@@ -265,18 +265,7 @@ rm -rf "$DIST/xapp/VFS/vendor/xapp/xflysystem/.git"
 
 mkdir "$DIST/logs"
 touch "$DIST/logs/all.log"
-
-#php $SCRIPT_DIR/removeComments.php -d $DIST/server
-#php $SCRIPT_DIR/removeComments.php -d $DIST/xapp
 cd "$DIST"
-
-#echo "removing comments"
-#php $SCRIPT_DIR/removeComments.php -d $DIST/xapp/
-#php $SCRIPT_DIR/removeComments.php -d $DIST/server/
-#php $SCRIPT_DIR/removeComments.php -d $DIST/templates/
-#exit
-
 zip -9 -q -r "xbox.zip" ./*
-
 cp -f "xbox.zip" "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
 chmod 755 "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
