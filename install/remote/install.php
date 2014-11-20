@@ -1879,8 +1879,10 @@ if(file_exists($downloaded)){
 		echo('install success! You can open it now '. '<br/>');
 		sleep(5);
 		if($AUTO_OPEN){
-			echo('redirect to ' . $OPEN_URL .  '<br/>');
+			echo('redirect to <a href=\"' . $OPEN_URL . '\">' . $OPEN_URL .'</a><br/>');
 			sleep(2);
+			ob_flush();
+			flush();
 			header("Location: " .$OPEN_URL);
 			die();
 		}
