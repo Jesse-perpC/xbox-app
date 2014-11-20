@@ -65,6 +65,16 @@ This a development version. It has many sub modules and needs around 1GB on the 
     git clone --recursive https://github.com/mc007/xbox-app    
 ```
 
+###Installation via one-click installer (downloads zip and un-compresses it)
+
+1. Upload via FTP this file into any directory on your server https://raw.githubusercontent.com/mc007/xbox-app/master/install/remote/install.php
+2. Make the parent directory writeable (755)!
+3. Open the url http://mysite/install.php in your browser!
+4. wait !
+5. The installer downloaded https://raw.githubusercontent.com/mc007/xbox-app/master/DIST/xbox.zip and unzipped it in http://mysite/xbox-app/ by default
+6. Open http://localhost/xbox-xapp/ 
+7. Delete the install.php from your server!
+
 ### Usage
 Navigate on your web server to : **http://localhost/xbox-app/index.php**
 
