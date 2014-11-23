@@ -295,6 +295,7 @@ function curl_progress($resource,$download_size, $downloaded, $upload_size, $upl
 	flush();
 	sleep(1); // just to see effect
 }
+
 /**
  * HTTP request method uses Curl extension to retrieve the url.
  *
