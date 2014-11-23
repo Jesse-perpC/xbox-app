@@ -131,7 +131,7 @@ $XF_CONFIG = array(
 		1,  //copy
 		1,  //move
 		1,  //info
-		1,  //download
+		0,  //download  : remote download, needed by Aviary-Image-Editor or dropping links into file panels
 		1,  //compress
 		1,  //delete
 		1,  //rename
