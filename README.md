@@ -59,7 +59,8 @@ This a development version. It has many sub modules and needs around 1GB on the 
 ``` bash 
     git clone https://github.com/mc007/xbox-app
     cd xbox-app
-    git submodules init
+    git submodule init
+    git submodule update
 ```
 
 ### Full Checkout (Checks out full tree: 1GB+)
