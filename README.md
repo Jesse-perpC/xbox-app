@@ -70,7 +70,8 @@ This a development version. It has many sub modules and needs around 1GB on the 
 ### Full Checkout (Checks out full tree: 1GB+)
 
 ``` bash 
-    git clone --recursive https://github.com/mc007/xbox-app    
+    git clone --recursive https://github.com/mc007/xbox-app
+    git submodule foreach --recursive git checkout master
 ```
 
 ###Installation via one-click installer (downloads zip and un-compresses it)
