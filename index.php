@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 1.0
+ * @version 1.7
  * @link https://github.com/mc007
  * @author mc007 mc007@pearls-media.com
  * @license : GPL v2. http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,16 +47,13 @@ $XAPP_SITE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR;
 $XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'xapp' . DIRECTORY_SEPARATOR;
 
 //ugly, seems i cant get defines from stub into here
+/*
 if(isset($_SERVER['SCRIPT_FILENAME']) && strpos($_SERVER['SCRIPT_FILENAME'],'runphar')!==false){
 	define('XAPP_PHAR', true);
 	define('XAPP_PHAR_FILE_PREFIX', 'phar://xapp.phar');
 }
+*/
 
-if(defined('XAPP_PHAR')){
-	$XAPP_BASE_DIRECTORY = '';
-	$XAPP_BASE_DIRECTORY = '';
-	$ROOT_DIRECTORY_ABSOLUTE  = dirname(Phar::running(false)) . DIRECTORY_SEPARATOR;
-}
 $XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';     //Salt key to sign and verify client calls
 
 define('XAPP_BASEDIR',$XAPP_BASE_DIRECTORY);    //the most important constant
@@ -65,27 +62,54 @@ define('_JEXEC',1);                             //bypass joomla php security
 
 
 /////////////////////////////////////////////////////////////////
+// Url parameter helpers
+/////////////////////////////////////////////////////////////////
+/**
+ * Sanitizes a string key.
+ *
+ * Keys are used as internal identifiers. Lowercase & uppercase alphanumeric characters, dashes, comma and underscores are allowed.
+ *
+ * @param string $key String key
+ * @return string Sanitized key
+ */
+function _sanitize_key( $key ) {
+	return preg_replace( '/[^A-Za-z0-9_\-]/', '', $key );
+}
+
+/**
+ * Return a _GET key but sanitzed
+ * @param $key
+ * @param $default
+ * @return string
+ */
+function _getKey($key,$default){
+	if(isset($_GET[$key])){
+		return _sanitize_key($_GET[$key]);
+	}
+	return $default;
+}
+
+
+
+/////////////////////////////////////////////////////////////////
 // Base configuration
 /////////////////////////////////////////////////////////////////
+//  The folder to browse, must be absolute and must have a trailing slash. This path can be outside of the web-server's httpdoc directory:
 
-
-//  The folder to browse, must be absolute and must have a trailing slash:
 $XF_PATH = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
 // allowed upload extensions. this is also used when renaming files
 $XF_ALLOWED_UPLOAD_EXTENSIONS = 'sh,php,js,css,less,bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,mp3';
 
 // prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
-$XF_PROHIBITED_PLUGINS = '';
+$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','');
 
 //jQuery theme, append the url by &theme=dot-luv ! You can choose from :
 // black-tie, blitzer, cupertino, dark-hive, dot-luv,eggplant,excite-bike,flick,hot-sneaks,humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,trontastic,ui-darkness,ui-lightness,vader
 // see http://jqueryui.com/themeroller/ for more!
-if(array_key_exists('theme',$_GET) && $_GET['theme']){
-	$XF_THEME = $_GET['theme'];
-}else{
-	$XF_THEME = 'blitzer';
-}
+$XF_THEME = _getKey('theme','blitzer');
+
+
 ///////////////////////////////////////////////////////////////////
 //
 //  Some constants for building a valid XFile configuration
@@ -106,6 +130,27 @@ const XF_LAYOUT_PRESET_BROWSER          =3;     //Classic Explorer like layout :
 const XF_LAYOUT_PRESET_PREVIEW          =4;     //Split view : top : preview window, bottom : thumbs
 const XF_LAYOUT_PRESET_GALLERY          =5;     //Split view : top : image cover flow window, bottom : thumbs
 
+
+/**
+ * Define extra variables for client rendering. This array will override existing variables (see xapp/commander/App near '$XAPP_RELATIVE_VARIABLES')
+ */
+$XF_RESOURCE_VARIABLES                  = array(
+	/**
+	 * This is the user name automatically filled into the login form(client/xfile/xbox/login.html) , you may set this to ''
+	 * Notice: this isn't setting the user name in the user database (xapp/commander/Users.php)
+	 *
+	 */
+	'FILLED_USER_NAME'          => 'admin',
+	/**
+	 * this is the password automatically filled into the login form(client/xfile/xbox/login.html), you may set this to ''
+	 * Notice: this isn't setting the user password in the user database (xapp/commander/Users.php)
+	 */
+	'FILLED_PASSWORD'           => 'asdasd'
+);
+
+/**
+ * Compose XFile configuration
+ */
 $XF_CONFIG = array(
 	"LAYOUT_PRESET" => XF_LAYOUT_PRESET_SINGLE,
 	"PANEL_OPTIONS" => array(
@@ -131,7 +176,7 @@ $XF_CONFIG = array(
 		1,  //copy
 		1,  //move
 		1,  //info
-		0,  //download  : remote download, needed by Aviary-Image-Editor or dropping links into file panels
+		1,  //download  : remote download, needed by Aviary-Image-Editor or dropping links into file panels
 		1,  //compress
 		1,  //delete
 		1,  //rename
@@ -189,7 +234,8 @@ $commanderStruct = xapp_commander_render_standalone(
     $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'log' . DIRECTORY_SEPARATOR,
     $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'conf' . DIRECTORY_SEPARATOR . 'settings.json',
     $XAPP_SALT_KEY,
-    $XF_PROHIBITED_PLUGINS
+    $XF_PROHIBITED_PLUGINS,
+    $XF_RESOURCE_VARIABLES
 );
 //punch it
 $commanderStruct['bootstrap']->handleRequest();
