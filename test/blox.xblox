@@ -18,7 +18,8 @@
       "order": 0,
       "items": [
         "d604471c-c5cf-8997-5be6-907ea0a059bf",
-        "0bb98305-b609-93e7-ca5e-7fab43e93c03"
+        "0bb98305-b609-93e7-ca5e-7fab43e93c03",
+        "06a461ae-ca50-0a8b-c0d3-5ebee54db40a"
       ]
     },
     {
@@ -49,6 +50,24 @@
       "type": "XBlox",
       "host": "this host",
       "declaredClass": "xblox.model.logging.Log",
+      "serializeMe": true,
+      "description": "No Description",
+      "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [],
+      "initial": "1",
+      "comparator": "<=",
+      "final": "5",
+      "modifier": "+1",
+      "counterName": "value",
+      "parentId": "aeaca388-5782-f624-54f0-900fec9b686c",
+      "id": "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
+      "name": "For",
+      "declaredClass": "xblox.model.loops.ForBlock",
       "serializeMe": true,
       "description": "No Description",
       "enabled": true,
