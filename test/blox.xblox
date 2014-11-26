@@ -17,14 +17,13 @@
       "renderBlockIcon": true,
       "order": 0,
       "items": [
-        "d604471c-c5cf-8997-5be6-907ea0a059bf",
-        "0bb98305-b609-93e7-ca5e-7fab43e93c03",
-        "06a461ae-ca50-0a8b-c0d3-5ebee54db40a"
+        "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
+        "0bb98305-b609-93e7-ca5e-7fab43e93c03"
       ]
     },
     {
       "_containsChildrenIds": [],
-      "parentId": "aeaca388-5782-f624-54f0-900fec9b686c",
+      "parentId": "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
       "id": "d604471c-c5cf-8997-5be6-907ea0a059bf",
       "name": "Run Server Method",
       "method": "XShell::run",
@@ -58,7 +57,9 @@
       "order": 0
     },
     {
-      "_containsChildrenIds": [],
+      "_containsChildrenIds": [
+        "items"
+      ],
       "initial": "1",
       "comparator": "<=",
       "final": "5",
@@ -73,7 +74,10 @@
       "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0
+      "order": 0,
+      "items": [
+        "d604471c-c5cf-8997-5be6-907ea0a059bf"
+      ]
     }
   ],
   "variables": []

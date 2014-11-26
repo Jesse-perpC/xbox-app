@@ -16,4 +16,4 @@ rm $DIST/xbox.zip
 cd $DIST/
 #find $DISTDIR -name *.git -exec rm '{}' ';'
 #git add -A
-#gitc
+gitc
