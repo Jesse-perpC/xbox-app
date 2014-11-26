@@ -39,7 +39,6 @@ rm -rf "$DIST/xapp/lib/rpc/_tmp/"
 rm -rf "$DIST/client/src/lib"
 rm -rf "$DIST/client/src/xfile/xjoomla"
 rm -rf "$DIST/client/src/xfile/dojo/dojo.js"
-rm -rf "$DIST/client/src/xfile/ext/xfileExternals.js"
 rm -rf "$DIST/client/src/xfile/ext/cm/codemirror.js"
 rm -rf "$DIST/client/src/themes/jQuery"
 
