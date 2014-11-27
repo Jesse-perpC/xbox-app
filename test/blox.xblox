@@ -58,7 +58,8 @@
     },
     {
       "_containsChildrenIds": [
-        "items"
+        "items",
+        "_counter"
       ],
       "initial": "1",
       "comparator": "<=",
@@ -77,7 +78,8 @@
       "order": 0,
       "items": [
         "d604471c-c5cf-8997-5be6-907ea0a059bf"
-      ]
+      ],
+      "_counter": "032bf115-41a1-7e68-0769-cb33c3b1b0bd"
     }
   ],
   "variables": []
