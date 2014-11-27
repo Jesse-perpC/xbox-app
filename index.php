@@ -219,8 +219,8 @@ $XF_CONFIG = array(
  * Run xfile with config above
  */
 
-require_once(XAPP_BASEDIR . 'commander/App.php');
 
+require_once(XAPP_BASEDIR . 'commander/App.php');
 $commanderStruct = xapp_commander_render_standalone(
     $XAPP_SITE_DIRECTORY.DIRECTORY_SEPARATOR.'xapp'.DIRECTORY_SEPARATOR,//xapp php directory
     'xbox',
