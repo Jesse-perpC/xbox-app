@@ -110,6 +110,10 @@ $XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','');
 // see http://jqueryui.com/themeroller/ for more!
 $XF_THEME = _getKey('theme','blitzer');
 
+$XAPP_COMPONENTS = array(
+	'XBLOX' => true,
+	'XIDE_VE' => true
+);
 
 ///////////////////////////////////////////////////////////////////
 //
@@ -130,6 +134,7 @@ const XF_LAYOUT_PRESET_SINGLE           =2;     //Single View only
 const XF_LAYOUT_PRESET_BROWSER          =3;     //Classic Explorer like layout : left: tree, center : thumbs
 const XF_LAYOUT_PRESET_PREVIEW          =4;     //Split view : top : preview window, bottom : thumbs
 const XF_LAYOUT_PRESET_GALLERY          =5;     //Split view : top : image cover flow window, bottom : thumbs
+
 
 
 /**
@@ -236,7 +241,8 @@ $commanderStruct = xapp_commander_render_standalone(
     $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'conf' . DIRECTORY_SEPARATOR . 'settings.json',
     $XAPP_SALT_KEY,
     $XF_PROHIBITED_PLUGINS,
-    $XF_RESOURCE_VARIABLES
+    $XF_RESOURCE_VARIABLES,
+    $XAPP_COMPONENTS
 );
 //punch it
 $commanderStruct['bootstrap']->handleRequest();

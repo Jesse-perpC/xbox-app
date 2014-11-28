@@ -8,3 +8,6 @@
 [submodule "utils"]
 	path = utils
 	url = https://github.com/mc007/xDojoWatch
+[submodule "user"]
+	path = user
+	url = https://github.com/mc007/xide_default_workspace
