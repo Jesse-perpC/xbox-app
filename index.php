@@ -169,7 +169,7 @@ $XF_CONFIG = array(
 		"ALLOW_MULTI_TAB"       =>  false,
 		"ALLOW_INFO_VIEW"       =>  true,
 		"ALLOW_LOG_VIEW"        =>  true,
-		"ALLOW_BREADCRUMBS"     =>  true,
+		"ALLOW_BREADCRUMBS"     =>  false,
 		"ALLOW_CONTEXT_MENU"    =>  true,
 		"ALLOW_LAYOUT_SELECTOR" =>  true,
 		"ALLOW_SOURCE_SELECTOR" =>  true,
@@ -182,34 +182,34 @@ $XF_CONFIG = array(
 	 * Allowed actions in UI and the server. Please check xapp/commander/App.php in the auth-delegate::authorize!
 	 */
 	"ALLOWED_ACTIONS" => array(
-		0,  //none
-		1,  //edit
-		1,  //copy
-		1,  //move
-		1,  //info
-		1,  //download  : remote download, needed by Aviary-Image-Editor or dropping links into file panels
-		1,  //compress
-		1,  //delete
-		1,  //rename
-		1,  //dnd
-		1,  //copy &paste
-		1,  //open
-		1,  //reload
-		1,  //preview
-		1,  //insert image
-		1,  //new file
-		1,  //new dir
-		1,  //upload
-		1,  //read
-		1,  //write
-		1,  //plugins
-		1,  //custom
-		1,  //find
-		1,  //perma link
-		1,  //add mount
-		1,  //remove mount
-		1,  //edit mount
-		1   //perspective
+		/*0*/	0,  //none
+		/*1*/	1,  //edit
+		/*2*/	1,  //copy
+		/*3*/   1,  //move
+		/*4*/   1,  //info
+		/*5*/   1,  //download  : remote download, needed by Aviary-Image-Editor or dropping links into file panels
+		/*6*/   1,  //compress
+		/*7*/   1,  //delete
+		/*8*/   1,  //rename
+		/*9*/   1,  //dnd
+		/*10*/  1,  //copy &paste
+		/*11*/  1,  //open
+		/*12*/  1,  //reload
+		/*13*/  1,  //preview
+		/*14*/  1,  //insert image
+		/*15*/  1,  //new file
+		/*16*/  1,  //new dir
+		/*17*/  1,  //upload
+		/*18*/  1,  //read
+		/*19*/  1,  //write
+		/*20*/  1,  //plugins
+		/*21*/  1,  //custom
+		/*22*/  1,  //find
+		/*23*/  1,  //perma link
+		/*24*/  1,  //add mount
+		/*25*/  1,  //remove mount
+		/*26*/  1,  //edit mount
+		/*27*/  1   //perspective
 
 	),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
