@@ -147,7 +147,7 @@ $XF_VISIBLE_FILE_EXTENSIONS = '*';
  */
 $XF_HIDDEN_FILE_EXTENSIONS = '.svn,.git,.idea';
 
-
+/****************************************************************************/
 
 // prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
 $XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','');
@@ -305,8 +305,12 @@ $commanderStruct = xapp_commander_render_standalone(
     $XF_RESOURCE_VARIABLES,
     $XAPP_COMPONENTS
 );
-//punch it
+/**
+ * Punch it Scotty!
+ *
+ */
 $commanderStruct['bootstrap']->handleRequest();
+
 
 
 /////////////////////////////////////////////////////////////////

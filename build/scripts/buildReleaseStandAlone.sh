@@ -14,6 +14,10 @@ mkdir -p $DIST
 cp -rf $SRC_DIR/* $DIST/
 
 
+rm -rf "$DIST/user"
+rm -rf "$DIST/client/.idea"
+
+
 rm -rf "$DIST/xapp//lib/rpc/_tmp/"
 rm -rf "$DIST/xapp//lib/PHPLinq/"
 rm -rf "$DIST/xapp//lib/lucene/"
