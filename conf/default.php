@@ -12,6 +12,8 @@ require (dirname(__FILE__) . DIRECTORY_SEPARATOR . '_base.php');
  */
 //$XF_CONFIG["PANEL_OPTIONS"]["ALLOW_INFO_VIEW"] = false;
 
+$XF_CONFIG["PANEL_OPTIONS"]["ALLOW_MAIN_MENU"] = false;
+
 /**
  * Override file repository root
  */

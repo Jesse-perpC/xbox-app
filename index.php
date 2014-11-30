@@ -208,7 +208,8 @@ $XF_CONFIG = array(
 		"ALLOW_SOURCE_SELECTOR" =>  true,
 		"ALLOW_COLUMN_RESIZE"   =>  true,
 		"ALLOW_COLUMN_REORDER"  =>  true,
-		"ALLOW_COLUMN_HIDE"     =>  true
+		"ALLOW_COLUMN_HIDE"     =>  true,
+		"ALLOW_MAIN_MENU"     =>  true
 	),
 
 	/**
