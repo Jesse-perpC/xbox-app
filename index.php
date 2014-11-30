@@ -38,82 +38,62 @@ Example urls
 <a target="_blank" href="../index.php?layout=preview&open=Pictures">Auto open picture folder in preview mode (split view with media preview)</a>
 <a target="_blank" href="../index.php?layout=single&minimal=true">Minimal (for mobile devices)</a>
 */
-
-/***
- * BASE DIRECTORIES, don't touch !
+/**
+ *
+ * What happens here:
+ *
+ * 1. Setup constants and framework directories
+ * 2. Setup a default configuration
+ * 3. Load conf/default.php to override default configuration (first pass)
+ * 4. Load conf/custom.php if exists to override default configuration (second pass)
+ * 5. Render RPC or client
+ *
  */
-$ROOT_DIRECTORY_ABSOLUTE = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
+/////////////////////////////////////////////////////////////////
+//
+// 1. Core directories & defines, don't touch !
+//
+/////////////////////////////////////////////////////////////////
+
+$ROOT_DIRECTORY_ABSOLUTE = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 $XAPP_SITE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR;
 $XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'xapp' . DIRECTORY_SEPARATOR;
 
-//ugly, seems i cant get defines from stub into here
-/*
-if(isset($_SERVER['SCRIPT_FILENAME']) && strpos($_SERVER['SCRIPT_FILENAME'],'runphar')!==false){
-	define('XAPP_PHAR', true);
-	define('XAPP_PHAR_FILE_PREFIX', 'phar://xapp.phar');
-}
-*/
-
-$XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';     //Salt key to sign and verify client calls
-
 define('XAPP_BASEDIR',$XAPP_BASE_DIRECTORY);    //the most important constant
-define('_VALID_MOS',1);                         //bypass joomla php security
-define('_JEXEC',1);                             //bypass joomla php security
-
 
 /////////////////////////////////////////////////////////////////
-// Url parameter helpers
+//
+// 1.1 Default directories and variables
+//
 /////////////////////////////////////////////////////////////////
-/**
- * Sanitizes a string key.
- *
- * Keys are used as internal identifiers. Lowercase & uppercase alphanumeric characters, dashes, comma and underscores are allowed.
- *
- * @param string $key String key
- * @return string Sanitized key
- */
-function _sanitize_key( $key ) {
-	return preg_replace( '/[^A-Za-z0-9_\-]/', '', $key );
-}
 
 /**
- * Return a _GET key but sanitzed
- * @param $key
- * @param $default
- * @return string
+ * CONF_DIRECTORY points to the configuration directory which contains our profile
  */
-function _getKey($key,$default){
-	if(isset($_GET[$key])){
-		return _sanitize_key($_GET[$key]);
-	}
-	return $default;
-}
+$CONF_DIRECTORY     =   $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'conf' . DIRECTORY_SEPARATOR;
 
 
-
-/////////////////////////////////////////////////////////////////
-// Base configuration
-/////////////////////////////////////////////////////////////////
-//  The folder to browse, must be absolute and must have a trailing slash. This path can be outside of the web-server's httpdoc directory:
-
+/**
+ * XF_PATH, the folder to browse; must be absolute and must have a trailing slash. This path can be outside of the web-server's httpdoc directory:
+ */
 $XF_PATH = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
-// allowed upload extensions. this is also used when renaming files
-$XF_ALLOWED_UPLOAD_EXTENSIONS = 'sh,php,js,css,less,bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,mp3';
 
-// prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
-$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','');
+/**
+ * XF_DEFAULT_PROFILE is the filename to the default profile. It will be fully resolved by using CONF_DIRECTORY as prefix.
+ * This profile will override the default profile. You can switch this profile also by appending the url with ('&profile=admin')
+ */
+$XF_DEFAULT_PROFILE =  _getKey('profile','default');
 
-//jQuery theme, append the url by &theme=dot-luv ! You can choose from :
-// black-tie, blitzer, cupertino, dark-hive, dot-luv,eggplant,excite-bike,flick,hot-sneaks,humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,trontastic,ui-darkness,ui-lightness,vader
-// see http://jqueryui.com/themeroller/ for more!
-$XF_THEME = _getKey('theme','blitzer');
 
-$XAPP_COMPONENTS = array(
-	'XBLOX' => true,
-	'XIDE_VE' => _getKey('xide',false)
-);
+/**
+ * XF_DEFAULT_CUSTOM_PROFILE is the filename to the custom profile. It will be fully resolved by using CONF_DIRECTORY as prefix.
+ * If this file exists, this profile is the last override. This pass enables you to run your own configuration with a developer distribution.
+ * the problem is that git pull won't work anymore as soon you did change this file or the conf/default.php.
+ */
+$XF_CUSTOM_PROFILE = 'custom';
+
 
 ///////////////////////////////////////////////////////////////////
 //
@@ -136,6 +116,51 @@ const XF_LAYOUT_PRESET_PREVIEW          =4;     //Split view : top : preview win
 const XF_LAYOUT_PRESET_GALLERY          =5;     //Split view : top : image cover flow window, bottom : thumbs
 
 
+/////////////////////////////////////////////////////////////////
+//
+// 2. Setup default configuration
+//
+/////////////////////////////////////////////////////////////////
+
+$XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';     //Salt key to sign and verify client calls
+
+// allowed upload extensions. this is also used when renaming files
+$XF_ALLOWED_UPLOAD_EXTENSIONS = 'sh,php,js,css,less,bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,mp3';
+
+
+/***************************************************************************
+ *
+ * File & directory masks. This must be compatible with PHP glob, see http://www.cowburn.info/2010/04/30/glob-patterns/ for more
+ * patterns.
+ *
+ */
+
+/**
+ * XF_VISIBLE_FILE_EXTENSIONS is a comma separated list of visible file extensions,ie: css,html,png
+ * If you want to show 'hidden' folders or files, you need to add '.*'
+ *
+ */
+$XF_VISIBLE_FILE_EXTENSIONS = '*';
+
+/**
+ * XF_VISIBLE_FILE_EXTENSIONS is a comma separated list of hidden file extensions,ie: php,sh
+ */
+$XF_HIDDEN_FILE_EXTENSIONS = '.svn,.git,.idea';
+
+
+
+// prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
+$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','');
+
+//jQuery theme, append the url by &theme=dot-luv ! You can choose from :
+// black-tie, blitzer, cupertino, dark-hive, dot-luv,eggplant,excite-bike,flick,hot-sneaks,humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,trontastic,ui-darkness,ui-lightness,vader
+// see http://jqueryui.com/themeroller/ for more!
+$XF_THEME = _getKey('theme','blitzer');
+
+$XAPP_COMPONENTS = array(
+	'XBLOX' => true,
+	'XIDE_VE' => _getKey('xide',false)
+);
 
 /**
  * Define extra variables for client rendering. This array will override existing variables (see xapp/commander/App near '$XAPP_RELATIVE_VARIABLES')
@@ -163,13 +188,21 @@ $XF_RESOURCE_VARIABLES                  = array(
  * Compose XFile configuration
  */
 $XF_CONFIG = array(
+
+	"DEFAULT_STORE_OPTIONS" => array(
+		"fields" => 1663,
+		"includeList" => $XF_VISIBLE_FILE_EXTENSIONS,
+		"excludeList" => $XF_HIDDEN_FILE_EXTENSIONS
+	),
+
 	"LAYOUT_PRESET" => XF_LAYOUT_PRESET_SINGLE,
+
 	"PANEL_OPTIONS" => array(
 		"ALLOW_NEW_TABS"        =>  true,
 		"ALLOW_MULTI_TAB"       =>  false,
 		"ALLOW_INFO_VIEW"       =>  true,
 		"ALLOW_LOG_VIEW"        =>  true,
-		"ALLOW_BREADCRUMBS"     =>  false,
+		"ALLOW_BREADCRUMBS"     =>  true,
 		"ALLOW_CONTEXT_MENU"    =>  true,
 		"ALLOW_LAYOUT_SELECTOR" =>  true,
 		"ALLOW_SOURCE_SELECTOR" =>  true,
@@ -226,12 +259,36 @@ $XF_CONFIG = array(
 	)
 );
 
+
+/////////////////////////////////////////////////////////////////
+//
+//  3. First pass, override config with CONF_DIRECTORY/default.php
+//
+/////////////////////////////////////////////////////////////////
+$XF_DEFAULT_PROFILE = realpath($CONF_DIRECTORY . DIRECTORY_SEPARATOR . $XF_DEFAULT_PROFILE . '.php');
+if(file_exists($XF_DEFAULT_PROFILE)){
+	require_once($XF_DEFAULT_PROFILE);
+}
+
+/////////////////////////////////////////////////////////////////
+//
+//  4. Second pass, override config with CONF_DIRECTORY/custom.php
+//
+/////////////////////////////////////////////////////////////////
+$XF_CUSTOM_PROFILE = realpath($CONF_DIRECTORY . DIRECTORY_SEPARATOR . $XF_CUSTOM_PROFILE    .  '.php');
+if(file_exists($XF_CUSTOM_PROFILE)){
+	require_once($XF_CUSTOM_PROFILE);
+}
+
+
+
 /**
  * Run xfile with config above
  */
 
 
 require_once(XAPP_BASEDIR . 'commander/App.php');
+
 $commanderStruct = xapp_commander_render_standalone(
     $XAPP_SITE_DIRECTORY.DIRECTORY_SEPARATOR.'xapp'.DIRECTORY_SEPARATOR,//xapp php directory
     'xbox',
@@ -241,7 +298,6 @@ $commanderStruct = xapp_commander_render_standalone(
 	$XF_ALLOWED_UPLOAD_EXTENSIONS,
 	json_encode($XF_CONFIG),
     $XF_THEME,//see client/themes/jQuery and pick the folder name
-    $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'server' . DIRECTORY_SEPARATOR,//service directory
     $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'log' . DIRECTORY_SEPARATOR,
     $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'conf' . DIRECTORY_SEPARATOR . 'settings.json',
     $XAPP_SALT_KEY,
@@ -251,3 +307,34 @@ $commanderStruct = xapp_commander_render_standalone(
 );
 //punch it
 $commanderStruct['bootstrap']->handleRequest();
+
+
+/////////////////////////////////////////////////////////////////
+//
+//  Url parameter helpers
+//
+/////////////////////////////////////////////////////////////////
+/**
+ * Sanitizes a string key.
+ *
+ * Keys are used as internal identifiers. Lowercase & uppercase alphanumeric characters, dashes, comma and underscores are allowed.
+ *
+ * @param string $key String key
+ * @return string Sanitized key
+ */
+function _sanitize_key( $key ) {
+	return preg_replace( '/[^A-Za-z0-9_\-]/', '', $key );
+}
+
+/**
+ * Return a _GET key but sanitzed
+ * @param $key
+ * @param $default
+ * @return string
+ */
+function _getKey($key,$default){
+	if(isset($_GET[$key])){
+		return _sanitize_key($_GET[$key]);
+	}
+	return $default;
+}
