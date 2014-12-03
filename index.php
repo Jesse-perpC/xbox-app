@@ -181,7 +181,17 @@ $XF_RESOURCE_VARIABLES                  = array(
 	/**
 	 * Pass the enabled components
 	 */
-	'COMPONENTS'                => json_encode($XAPP_COMPONENTS)
+	'COMPONENTS'                => json_encode($XAPP_COMPONENTS),
+
+	/**
+	 *  Adjust global font size
+	 */
+	'GLOBAL_FONT_SIZE'          =>'0.78em',
+	/**
+	 *  Adjust action button icon size
+	 */
+	'ACTION_BUTTON_SIZE'        =>'1.3em'
+
 );
 
 /**
