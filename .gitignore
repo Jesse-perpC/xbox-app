@@ -35,6 +35,8 @@
 
 # IntelliJ
 out/
+conf/custom.php
+
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
