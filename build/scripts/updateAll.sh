@@ -9,7 +9,7 @@ echo $BASEDIR
 
 # build dojo single file
 cd $BASEDIR/../../client/src
-sh buildstandalone.sh
+#sh buildstandalone.sh
 gitc
 
 # commit xphp
@@ -18,7 +18,7 @@ gitc
 
 cd $BASEDIR/
 # update dist zip
-sh $BASEDIR/buildReleaseStandAlone.sh
+#sh $BASEDIR/buildReleaseStandAlone.sh
 # update windows app
 sh $BASEDIR/updateWindowsApp.sh
 

@@ -12,8 +12,5 @@ mkdir -p $DIST
 cp -rf $SRC_DIR/* $DIST/
 rm $DIST/xbox.zip
 
-
 cd $DIST/
-#find $DISTDIR -name *.git -exec rm '{}' ';'
-#git add -A
 gitc
