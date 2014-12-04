@@ -8,7 +8,7 @@
       "id": "aeaca388-5782-f624-54f0-900fec9b686c",
       "name": "On Key",
       "event": "shift s",
-      "reference": "{\"reference\":\"dijit.form.ValidationTextBox\",\"mode\":\"byclass\"}",
+      "reference": "{\"reference\":\"\",\"mode\":\"byclass\"}",
       "description": "Triggers when a keyboard sequence has been entered",
       "declaredClass": "xblox.model.events.OnKey",
       "serializeMe": true,
@@ -18,8 +18,7 @@
       "order": 0,
       "items": [
         "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
-        "0bb98305-b609-93e7-ca5e-7fab43e93c03",
-        "090fd25b-f401-f607-6daf-5ce8aa7d5e44"
+        "0bb98305-b609-93e7-ca5e-7fab43e93c03"
       ]
     },
     {
@@ -79,21 +78,6 @@
       "items": [
         "d604471c-c5cf-8997-5be6-907ea0a059bf"
       ]
-    },
-    {
-      "_containsChildrenIds": [],
-      "parentId": "aeaca388-5782-f624-54f0-900fec9b686c",
-      "id": "090fd25b-f401-f607-6daf-5ce8aa7d5e44",
-      "name": "Set CSS",
-      "file": "",
-      "reference": "",
-      "description": "Sets HTML Node CSS",
-      "declaredClass": "xblox.model.html.SetCSS",
-      "serializeMe": true,
-      "enabled": true,
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0
     }
   ],
   "variables": []
