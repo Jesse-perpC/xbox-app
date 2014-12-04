@@ -269,5 +269,5 @@ mkdir "$DIST/logs"
 touch "$DIST/logs/all.log"
 cd "$DIST"
 zip -9 -q -r "xbox.zip" ./*
-cp -f "xbox.zip" "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
-chmod 755 "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
+#cp -f "xbox.zip" "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
+#chmod 755 "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"

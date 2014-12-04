@@ -18,7 +18,10 @@ gitc
 
 cd $BASEDIR/
 # update dist zip
-#sh $BASEDIR/buildReleaseStandAlone.sh
+sh $BASEDIR/buildReleaseStandAlone.sh
+
+set -x
+
 # update windows app
 sh $BASEDIR/updateWindowsApp.sh
 
