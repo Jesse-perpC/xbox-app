@@ -86,7 +86,7 @@ $XF_PATH = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
  *
  * There is also a guest profile : &profile=min
  */
-$XF_DEFAULT_PROFILE =  _getKey('profile','default');
+$XF_DEFAULT_PROFILE =  'default';
 
 
 /**
@@ -94,7 +94,7 @@ $XF_DEFAULT_PROFILE =  _getKey('profile','default');
  * If this file exists, this profile is the last override. This pass enables you to run your own configuration with a developer distribution.
  * the problem is that git pull won't work anymore as soon you did change this file or the conf/default.php.
  */
-$XF_CUSTOM_PROFILE = 'custom';
+$XF_CUSTOM_PROFILE = _getKey('profile','custom');
 
 
 ///////////////////////////////////////////////////////////////////
