@@ -83,6 +83,8 @@ $XF_PATH = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 /**
  * XF_DEFAULT_PROFILE is the filename to the default profile. It will be fully resolved by using CONF_DIRECTORY as prefix.
  * This profile will override the default profile. You can switch this profile also by appending the url with ('&profile=admin')
+ *
+ * There is also a guest profile : &profile=min
  */
 $XF_DEFAULT_PROFILE =  _getKey('profile','default');
 
@@ -219,7 +221,7 @@ $XF_CONFIG = array(
 		"ALLOW_COLUMN_RESIZE"   =>  true,
 		"ALLOW_COLUMN_REORDER"  =>  true,
 		"ALLOW_COLUMN_HIDE"     =>  true,
-		"ALLOW_MAIN_MENU"     =>  true
+		"ALLOW_MAIN_MENU"       =>  false
 	),
 
 	/**
@@ -227,11 +229,11 @@ $XF_CONFIG = array(
 	 */
 	"ALLOWED_ACTIONS" => array(
 		/*0*/	0,  //none
-		/*1*/	1,  //edit
+		/*1*/	1,  //edit : not used!
 		/*2*/	1,  //copy
 		/*3*/   1,  //move
 		/*4*/   1,  //info
-		/*5*/   1,  //download  : remote download, needed by Aviary-Image-Editor or dropping links into file panels
+		/*5*/   1,  //download: images and file content
 		/*6*/   1,  //compress
 		/*7*/   1,  //delete
 		/*8*/   1,  //rename
@@ -240,20 +242,21 @@ $XF_CONFIG = array(
 		/*11*/  1,  //open
 		/*12*/  1,  //reload
 		/*13*/  1,  //preview
-		/*14*/  1,  //insert image
-		/*15*/  1,  //new file
-		/*16*/  1,  //new dir
-		/*17*/  1,  //upload
-		/*18*/  1,  //read
-		/*19*/  1,  //write
-		/*20*/  1,  //plugins
-		/*21*/  1,  //custom
-		/*22*/  1,  //find
-		/*23*/  1,  //perma link
-		/*24*/  1,  //add mount
-		/*25*/  1,  //remove mount
-		/*26*/  1,  //edit mount
-		/*27*/  1   //perspective
+		/*14*/  1,  //reserved
+		/*15*/  1,  //insert image
+		/*16*/  1,  //new file
+		/*17*/  1,  //new dir
+		/*18*/  1,  //upload
+		/*19*/  1,  //read //not used
+		/*20*/  1,  //write
+		/*21*/  1,  //plugins
+		/*22*/  1,  //custom
+		/*23*/  1,  //find
+		/*24*/  1,  //perma link: not used
+		/*25*/  1,  //add mount
+		/*26*/  1,  //remove mount
+		/*27*/  1,  //edit mount
+		/*28*/  1   //perspective
 
 	),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
@@ -291,12 +294,9 @@ if(file_exists($XF_CUSTOM_PROFILE)){
 	require_once($XF_CUSTOM_PROFILE);
 }
 
-
-
 /**
  * Run xfile with config above
  */
-
 
 require_once(XAPP_BASEDIR . 'commander/App.php');
 
