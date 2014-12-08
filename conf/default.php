@@ -107,6 +107,7 @@ $XF_CONFIG = array(
 		"ALLOW_COLUMN_RESIZE"   =>  true,
 		"ALLOW_COLUMN_REORDER"  =>  true,
 		"ALLOW_COLUMN_HIDE"     =>  true,
+		"ALLOW_ACTION_TOOLBAR"  =>  true,
 		"ALLOW_MAIN_MENU"     =>  true
 	),
 

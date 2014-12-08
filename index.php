@@ -256,7 +256,7 @@ $XF_CONFIG = array(
 		/*25*/  1,  //add mount
 		/*26*/  1,  //remove mount
 		/*27*/  1,  //edit mount
-		/*28*/  1   //perspective
+		/*28*/  0   //perspective
 
 	),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel

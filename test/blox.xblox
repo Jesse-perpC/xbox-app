@@ -17,8 +17,8 @@
       "renderBlockIcon": true,
       "order": 0,
       "items": [
-        "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
-        "0bb98305-b609-93e7-ca5e-7fab43e93c03"
+        "0bb98305-b609-93e7-ca5e-7fab43e93c03",
+        "06a461ae-ca50-0a8b-c0d3-5ebee54db40a"
       ]
     },
     {
@@ -78,6 +78,41 @@
       "items": [
         "d604471c-c5cf-8997-5be6-907ea0a059bf"
       ]
+    },
+    {
+      "_containsChildrenIds": [
+        "items"
+      ],
+      "group": "On Load",
+      "id": "ebc82354-a3f9-cad0-9d55-43da51e5dd11",
+      "items": [
+        "6baab43e-07b7-61d5-6f42-6721e285aa83"
+      ],
+      "name": "On Key",
+      "event": "",
+      "reference": "",
+      "description": "Triggers when a keyboard sequence has been entered",
+      "declaredClass": "xblox.model.events.OnKey",
+      "serializeMe": true,
+      "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [],
+      "parentId": "ebc82354-a3f9-cad0-9d55-43da51e5dd11",
+      "id": "6baab43e-07b7-61d5-6f42-6721e285aa83",
+      "name": "Set CSS",
+      "file": "",
+      "reference": "",
+      "description": "Sets HTML Node CSS",
+      "declaredClass": "xblox.model.html.SetCSS",
+      "serializeMe": true,
+      "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
     }
   ],
   "variables": []
