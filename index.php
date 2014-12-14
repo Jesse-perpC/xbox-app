@@ -14,19 +14,13 @@
  * Server   : - RPC-JSON 2.0 + Dojo SMD (Service Method Definition)
  *            - All RPC calls go through here as well
  *            - see @link :http://localhost/xcom/index.php?view=rpc for the full service map. plugins are exposed through this entry point too
- *            - Plugins are exposed through the very same SMD based entry point too
-
+ *
  * Client   : - Is a large Dojo & XJS application.
  *            - Client resources are described in client/xfile/xbox/resources-release.json
  *
  * Security : - All RPC calls are signed upon its payload + md5(userName)=key + md5(sessionToken)=token
  *            - See component options to narrow it further for live stages.
  *            - See Xapp_Rpc_Gateway options, signing callbacks are possible as well
- *            - You can rename, wrap, move this component!
- *
- *
- * Support  :  write an email through the official site for this component.
- *
  *
  *
 
@@ -38,6 +32,7 @@ Example urls
 <a target="_blank" href="../index.php?layout=preview&open=Pictures">Auto open picture folder in preview mode (split view with media preview)</a>
 <a target="_blank" href="../index.php?layout=single&minimal=true">Minimal (for mobile devices)</a>
 */
+
 /**
  *
  * What happens here:
@@ -257,7 +252,7 @@ $XF_CONFIG = array(
 		/*25*/  1,  //add mount
 		/*26*/  1,  //remove mount
 		/*27*/  1,  //edit mount
-		/*28*/  0   //perspective
+		/*28*/  1   //perspective
 
 	),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
@@ -343,7 +338,7 @@ function _sanitize_key( $key ) {
 }
 
 /**
- * Return a _GET key but sanitzed
+ * Return a _GET key but sanitized
  * @param $key
  * @param $default
  * @return string
