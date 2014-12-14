@@ -112,6 +112,14 @@ const XF_LAYOUT_PRESET_BROWSER          =3;     //Classic Explorer like layout :
 const XF_LAYOUT_PRESET_PREVIEW          =4;     //Split view : top : preview window, bottom : thumbs
 const XF_LAYOUT_PRESET_GALLERY          =5;     //Split view : top : image cover flow window, bottom : thumbs
 
+const XF_DIR_OPTION_SHOW_ISREADONLY     =1601;
+const XF_DIR_OPTION_SHOW_ISDIR          =1602;  //required!
+const XF_DIR_OPTION_SHOW_OWNER          =1604;
+const XF_DIR_OPTION_SHOW_MIME           =1608;
+const XF_DIR_OPTION_SHOW_SIZE           =1616;
+const XF_DIR_OPTION_SHOW_PERMISSIONS    =1632;  //
+const XF_DIR_OPTION_SHOW_TIME           =1633;  //modified field
+const XF_DIR_OPTION_SHOW_FOLDER_SIZE    =1634;  //only for Linux with popen and 'du' enabled/installed
 
 /////////////////////////////////////////////////////////////////
 //
@@ -143,6 +151,17 @@ $XF_VISIBLE_FILE_EXTENSIONS = '*';
  * XF_VISIBLE_FILE_EXTENSIONS is a comma separated list of hidden file extensions,ie: php,sh
  */
 $XF_HIDDEN_FILE_EXTENSIONS = '.svn,.git,.idea';
+
+/**
+ * Flags to use when iterating a directory.
+ */
+$XF_NODE_FLAGS = XF_DIR_OPTION_SHOW_ISDIR |
+	XF_DIR_OPTION_SHOW_SIZE |
+	XF_DIR_OPTION_SHOW_FOLDER_SIZE |
+	XF_DIR_OPTION_SHOW_PERMISSIONS |
+	XF_DIR_OPTION_SHOW_MIME |
+	XF_DIR_OPTION_SHOW_OWNER |
+	XF_DIR_OPTION_SHOW_TIME;
 
 /****************************************************************************/
 
@@ -196,10 +215,13 @@ $XF_RESOURCE_VARIABLES                  = array(
  */
 $XF_CONFIG = array(
 
+	/**
+	 * Default store options masks the directory iterator.
+	 */
 	"DEFAULT_STORE_OPTIONS" => array(
-		"fields" => 1663,
-		"includeList" => $XF_VISIBLE_FILE_EXTENSIONS,
-		"excludeList" => $XF_HIDDEN_FILE_EXTENSIONS
+		"fields"        => $XF_NODE_FLAGS,
+		"includeList"   => $XF_VISIBLE_FILE_EXTENSIONS,
+		"excludeList"   => $XF_HIDDEN_FILE_EXTENSIONS
 	),
 
 	"LAYOUT_PRESET" => XF_LAYOUT_PRESET_SINGLE,
