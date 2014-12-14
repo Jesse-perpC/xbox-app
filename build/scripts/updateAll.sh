@@ -9,7 +9,7 @@ echo $BASEDIR
 
 # build dojo single file
 cd $BASEDIR/../../client/src
-sh buildstandalone.sh
+#sh buildstandalone.sh
 gitc
 
 # commit xphp

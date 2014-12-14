@@ -189,20 +189,23 @@ $XF_RESOURCE_VARIABLES                  = array(
 	 *
 	 */
 	'FILLED_USER_NAME'          => 'admin',
+	
 	/**
 	 * this is the password automatically filled into the login form(client/xfile/xbox/login.html), you may set this to ''
 	 * Notice: this isn't setting the user password in the user database (xapp/commander/Users.php)
 	 */
 	'FILLED_PASSWORD'           => 'asdasd',
+	
 	/**
 	 * Pass the enabled components
 	 */
 	'COMPONENTS'                => json_encode($XAPP_COMPONENTS),
-
+	
 	/**
 	 *  Adjust global font size
 	 */
 	'GLOBAL_FONT_SIZE'          =>'0.78em',
+	
 	/**
 	 *  Adjust action button icon size
 	 */
@@ -228,7 +231,7 @@ $XF_CONFIG = array(
 
 	"PANEL_OPTIONS" => array(
 		"ALLOW_NEW_TABS"        =>  true,
-		"ALLOW_MULTI_TAB"       =>  false,
+		"ALLOW_MULTI_TAB"       =>  false, //misleading flag, it has always multitab. ignore this switch!
 		"ALLOW_INFO_VIEW"       =>  true,
 		"ALLOW_LOG_VIEW"        =>  true,
 		"ALLOW_BREADCRUMBS"     =>  true,
