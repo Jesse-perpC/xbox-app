@@ -165,14 +165,27 @@ $XF_NODE_FLAGS = XF_DIR_OPTION_SHOW_ISDIR |
 
 /****************************************************************************/
 
-// prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
-$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','');
+/**
+ * $XF_PROHIBITED_PLUGINS: prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
+ */
+$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XSVN,XLESS,XHTMLEditor,XZoho');
 
-//jQuery theme, append the url by &theme=dot-luv ! You can choose from :
-// black-tie, blitzer, cupertino, dark-hive, dot-luv,eggplant,excite-bike,flick,hot-sneaks,humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,trontastic,ui-darkness,ui-lightness,vader
-// see http://jqueryui.com/themeroller/ for more!
+/**
+ * $XF_THEME defines the jQuery theme, append the url by &theme=dot-luv ! You can choose from :
+ * black-tie, blitzer, cupertino, dark-hive, dot-luv,eggplant,excite-bike,flick,hot-sneaks,
+ * humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,
+ * trontastic,ui-darkness,ui-lightness,vader
+ * see http://jqueryui.com/themeroller/ for more!
+ */
 $XF_THEME = _getKey('theme','blitzer');
 
+/**
+ * $XAPP_COMPONENTS describes the components to be loaded.
+ * There is currently:
+ * 1. XBLOX: a visual programming language to extend the file manager with a built-in macro system
+ * 2. XIDE_VE: a visual editor for HTML - Authoring (Dojo only). This needs currently &debug=true to run.
+ *
+ */
 $XAPP_COMPONENTS = array(
 	'XBLOX' => true,
 	'XIDE_VE' => _getKey('xide',false)
