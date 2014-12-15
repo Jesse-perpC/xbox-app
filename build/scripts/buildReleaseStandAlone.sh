@@ -257,7 +257,18 @@ rm -rf "$DIST/blox.xblox"
 rm -rf "$DIST/desktop.cfhtml"
 rm -rf "$DIST/snippets"
 rm -rf "$DIST/client/src/*.sh"
+rm -rf "$DIST/client/src/xfile/xas"
+rm -rf "$DIST/client/src/xfile/preview"
 rm -rf "$DIST/client/src/xfile/xideve"
+rm -rf "$DIST/client/src/xfile/ext/xfileExternalsWP.js"
+rm -rf "$DIST/client/src/xfile/ext/stacktrace.js"
+rm -rf "$DIST/client/src/xfile/ext/moment.js"
+rm -rf "$DIST/client/src/xfile/ext/moment-with-langs.js"
+rm -rf "$DIST/client/src/xfile/ext/moment-with-langs.min.js"
+rm -rf "$DIST/client/src/xfile/ext/jquery-1.9.1.min.js"
+rm -rf "$DIST/client/src/xfile/ext/jquery-ui-1.10.1.custom.min.js"
+rm -rf "$DIST/client/src/xfile/ext/keypress-2.0.3.min.js"
+
 
 
 
@@ -284,6 +295,8 @@ cd "$DIST"
 
 find . -name *.git* -exec rm -rf '{}' ';'
 find . -name .idea -exec rm -rf '{}' ';'
+find . -name *.sh* -exec rm -rf '{}' ';'
+
 
 
 zip -9 -q -r "xbox.zip" ./*
