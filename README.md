@@ -41,11 +41,14 @@ Little unstable! There is still a lot of old and rubbish code to be removed. How
 
 ##Important
 
-This a development version. It has many sub modules and needs around 1GB on the disc. You may download a pre-built version from here(@TODO add link) 
+This a development version. It has many sub modules and needs around 1 GB on the disc. You may download a pre-built version from [here](https://github.com/mc007/xbox-app/releases) 
 
 ## Requirements 
 
 - PHP 5.3+ (better 5.4!)
+- PHP : MBString extension
+- PHP : Curl/SSL when using SFTP/WebDav/Dropbox
+ 
 
 ## Installation 
 
