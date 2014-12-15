@@ -168,6 +168,10 @@ rm -rfv "$DIST/xapp/conf.inc.release.php"
 rm -rfv "$DIST/xapp/conf.inc.release.wp.php"
 rm -rfv "$DIST/xapp/conf.joomla.php"
 rm -rfv "$DIST/xapp/index.php"
+rm -rfv "$DIST/conf/custom.php"
+rm -rfv "$DIST/xideve"
+
+
 rm -rfv "$DIST/xapp/includes.php"
 rm -rfv "$DIST/xapp/ISchemaProcessor.php"
 
@@ -249,6 +253,15 @@ rm -rf "$DIST/xapp/VFS/vendor/sabre/vobject/bin"
 rm -rf "$DIST/xapp/VFS/vendor/sabre/vobject/examples"
 rm -rf "$DIST/xapp/VFS/vendor/sabre/vobject/tests"
 
+rm -rf "$DIST/blox.xblox"
+rm -rf "$DIST/desktop.cfhtml"
+rm -rf "$DIST/snippets"
+rm -rf "$DIST/client/src/*.sh"
+rm -rf "$DIST/client/src/xfile/xideve"
+
+
+
+
 rm -rf "$DIST/xapp/VFS/vendor/dropbox/dropbox-sdk/test"
 rm -rf "$DIST/xapp/VFS/vendor/dropbox/dropbox-sdk/examples"
 
@@ -268,6 +281,11 @@ rm -rf "$DIST/xapp/VFS/vendor/xapp/xflysystem/.git"
 mkdir "$DIST/logs"
 touch "$DIST/logs/all.log"
 cd "$DIST"
+
+find . -name *.git* -exec rm -rf '{}' ';'
+find . -name .idea -exec rm -rf '{}' ';'
+
+
 zip -9 -q -r "xbox.zip" ./*
 #cp -f "xbox.zip" "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
 #chmod 755 "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
