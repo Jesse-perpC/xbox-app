@@ -14,7 +14,7 @@ PHP/JS based and full featured file manager
  - Javascript & Bash Shell
  - Built- in Javascript and Bash shell
  - Basic support for SFTP, FTP, WEBDAV, DROPBOX
- - 5 display modes for file panels : thumbnails, tree, image cover flow (ala Mac Finder), list, preview, split horizontal and split vertical
+ - 6 display modes for file panels : thumbnails, tree, image cover flow (ala Mac Finder), list, preview, split horizontal and split vertical
  - 5 main layouts : Dual panel, single panel, preview (ideal for media browsing), gallery and browser (classic : tree and thumbs)  
  - Supports folder locations outside of the Apache http docs folder
  - Logging panel with filters
