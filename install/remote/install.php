@@ -1845,9 +1845,6 @@ function unzip_file($file, $to) {
 
 	/**
 	 * Filter whether to use ZipArchive to unzip archives.
-	 *
-	 * @since 3.0.0
-	 *
 	 * @param bool $ziparchive Whether to use ZipArchive. Default true.
 	 */
 	if ( class_exists( 'ZipArchive' )) {
