@@ -119,6 +119,9 @@ rm -rfv "$DIST/xapp/commander/plugins/Zoho"
 rm -rfv "$DIST/xapp/commander/plugins/LESS"
 rm -rfv "$DIST/xapp/commander/plugins/HTMLEditor"
 rm -rfv "$DIST/xapp/commander/plugins/SVN"
+
+rm -rfv "$DIST/xapp/commander/plugins/youtube_download"
+
 rm -rfv "$DIST/xapp/connect/filter"
 rm -rfv "$DIST/xapp/connect/forms"
 rm -rfv "$DIST/xapp/connect/html"
