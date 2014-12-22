@@ -20,8 +20,7 @@ require (dirname(__FILE__) . DIRECTORY_SEPARATOR . '_base.php');
 /**
  * Override file repository root
  */
-//$XF_PATH = '/home/mc007/Desktop/';
-
+//$XF_PATH = '/PMaster/projects/xbox-app/test/';
 
 
 
@@ -40,7 +39,8 @@ require (dirname(__FILE__) . DIRECTORY_SEPARATOR . '_base.php');
 /****************************************************************************/
 
 // prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
-$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell');
+$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS');
+
 
 //jQuery theme, append the url by &theme=dot-luv ! You can choose from :
 // black-tie, blitzer, cupertino, dark-hive, dot-luv,eggplant,excite-bike,flick,hot-sneaks,humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,trontastic,ui-darkness,ui-lightness,vader
@@ -105,11 +105,11 @@ $XF_CONFIG = array(
 		"ALLOW_MULTI_TAB"       =>  false,
 		"ALLOW_INFO_VIEW"       =>  false,
 		"ALLOW_LOG_VIEW"        =>  false,
-		"ALLOW_BREADCRUMBS"     =>  true,
-		"ALLOW_CONTEXT_MENU"    =>  true,
+		"ALLOW_BREADCRUMBS"     =>  false,
+		"ALLOW_CONTEXT_MENU"    =>  false,
 		"ALLOW_LAYOUT_SELECTOR" =>  true,
 		"ALLOW_SOURCE_SELECTOR" =>  false,
-		"ALLOW_COLUMN_RESIZE"   =>  true,
+		"ALLOW_COLUMN_RESIZE"   =>  false,
 		"ALLOW_COLUMN_REORDER"  =>  false,
 		"ALLOW_COLUMN_HIDE"     =>  false,
 		"ALLOW_MAIN_MENU"       =>  false
@@ -122,39 +122,39 @@ $XF_CONFIG = array(
 	//
 	// Allowed actions in UI and the server. Please check xapp/commander/App.php in the auth-delegate::authorize!
 	//
-	"ALLOWED_ACTIONS" => array(
+"ALLOWED_ACTIONS" => array(
 
-		/*0*/	0,  //none
-		/*1*/	0,  //edit
-		/*2*/	0,  //copy
-		/*3*/   0,  //move
-		/*4*/   0,  //info
-		/*5*/   1,  //download
-		/*6*/   0,  //compress
-		/*7*/   0,  //delete
-		/*8*/   0,  //rename
-		/*9*/   0,  //dnd
-		/*10*/  0,  //copy &paste
-		/*11*/  0,  //open
-		/*12*/  0,  //reload
-		/*13*/  0,  //preview
-		/*14*/  0,  //reserved
-		/*15*/  0,  //insert image
-		/*16*/  0,  //new file
-		/*17*/  0,  //new dir
-		/*18*/  0,  //upload
-		/*19*/  1,  //read
-		/*20*/  0,  //write
-		/*21*/  0,  //plugins
-		/*22*/  0,  //custom
-		/*23*/  0,  //find
-		/*24*/  0,  //perma link
-		/*25*/  0,  //add mount
-		/*26*/  0,  //remove mount
-		/*27*/  0,  //edit mount
-		/*28*/  1   //perspective
+/*0*/	0,  //none
+/*1*/	0,  //edit
+/*2*/	0,  //copy
+/*3*/   0,  //move
+/*4*/   0,  //info
+/*5*/   0,  //download
+/*6*/   0,  //compress
+/*7*/   0,  //delete
+/*8*/   0,  //rename
+/*9*/   0,  //dnd
+/*10*/  0,  //copy &paste
+/*11*/  0,  //open
+/*12*/  0,  //reload
+/*13*/  0,  //preview
+/*14*/  0,  //reserved
+/*15*/  0,  //insert image
+/*16*/  0,  //new file
+/*17*/  0,  //new dir
+/*18*/  0,  //upload
+/*19*/  1,  //read
+/*20*/  0,  //write
+/*21*/  0,  //plugins
+/*22*/  0,  //custom
+/*23*/  0,  //find
+/*24*/  0,  //perma link
+/*25*/  0,  //add mount
+/*26*/  0,  //remove mount
+/*27*/  0,  //edit mount
+/*28*/  0   //perspective
 
-	),
+),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
 		"LAYOUT" => XF_PANEL_MODE_LIST, //when using tree, its target is then the main panel
 		"AUTO_OPEN" => "true"
