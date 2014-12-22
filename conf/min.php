@@ -112,7 +112,8 @@ $XF_CONFIG = array(
 		"ALLOW_COLUMN_RESIZE"   =>  false,
 		"ALLOW_COLUMN_REORDER"  =>  false,
 		"ALLOW_COLUMN_HIDE"     =>  false,
-		"ALLOW_MAIN_MENU"       =>  false
+		"ALLOW_MAIN_MENU"       =>  true,
+		"ALLOW_ACTION_TOOLBAR"  =>  true
 	),
 
 
@@ -125,26 +126,26 @@ $XF_CONFIG = array(
 "ALLOWED_ACTIONS" => array(
 
 /*0*/	0,  //none
-/*1*/	0,  //edit
-/*2*/	0,  //copy
+/*1*/	1,  //edit
+/*2*/	1,  //copy
 /*3*/   0,  //move
-/*4*/   0,  //info
+/*4*/   1,  //info
 /*5*/   0,  //download
 /*6*/   0,  //compress
-/*7*/   0,  //delete
-/*8*/   0,  //rename
+/*7*/   1,  //delete
+/*8*/   1,  //rename
 /*9*/   0,  //dnd
-/*10*/  0,  //copy &paste
-/*11*/  0,  //open
-/*12*/  0,  //reload
+/*10*/  1,  //copy &paste
+/*11*/  1,  //open
+/*12*/  1,  //reload
 /*13*/  0,  //preview
 /*14*/  0,  //reserved
 /*15*/  0,  //insert image
-/*16*/  0,  //new file
-/*17*/  0,  //new dir
+/*16*/  1,  //new file
+/*17*/  1,  //new dir
 /*18*/  0,  //upload
 /*19*/  1,  //read
-/*20*/  0,  //write
+/*20*/  1,  //write
 /*21*/  0,  //plugins
 /*22*/  0,  //custom
 /*23*/  0,  //find
