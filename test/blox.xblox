@@ -1,9 +1,7 @@
 {
   "blocks": [
     {
-      "_containsChildrenIds": [
-        "items"
-      ],
+      "_containsChildrenIds": [],
       "group": "On Load",
       "id": "aeaca388-5782-f624-54f0-900fec9b686c",
       "name": "On Key",
@@ -12,102 +10,20 @@
       "description": "Triggers when a keyboard sequence has been entered",
       "declaredClass": "xblox.model.events.OnKey",
       "serializeMe": true,
-      "enabled": true,
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0,
-      "items": [
-        "0bb98305-b609-93e7-ca5e-7fab43e93c03",
-        "06a461ae-ca50-0a8b-c0d3-5ebee54db40a"
-      ]
-    },
-    {
-      "_containsChildrenIds": [],
-      "parentId": "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
-      "id": "d604471c-c5cf-8997-5be6-907ea0a059bf",
-      "name": "Run Server Method",
-      "method": "XShell::run",
-      "args": "[{\"name\":\"shellType\",\"default\":\"sh\",\"optional\":false,\"value\":\"notset\"},{\"name\":\"cmdBase64\",\"optional\":false,\"value\":\"ls\"},{\"name\":\"cwd\",\"default\":null,\"optional\":true,\"value\":\"[CurrentDirectory]\"}]",
-      "deferred": true,
-      "defaultServiceClass": "XShell",
-      "defaultServiceMethod": "run",
-      "declaredClass": "xblox.model.server.RunServerMethod",
-      "serializeMe": true,
-      "description": "No Description",
-      "enabled": true,
+      "enabled": false,
       "canDelete": true,
       "renderBlockIcon": true,
       "order": 0
     },
     {
       "_containsChildrenIds": [],
-      "parentId": "aeaca388-5782-f624-54f0-900fec9b686c",
-      "id": "0bb98305-b609-93e7-ca5e-7fab43e93c03",
-      "message": "return 'did smd';",
-      "name": "Log Message",
-      "level": "info",
-      "type": "XBlox",
-      "host": "this host",
-      "declaredClass": "xblox.model.logging.Log",
-      "serializeMe": true,
-      "description": "No Description",
-      "enabled": true,
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0
-    },
-    {
-      "_containsChildrenIds": [
-        "items"
-      ],
-      "initial": "1",
-      "comparator": "<=",
-      "final": "5",
-      "modifier": "+1",
-      "counterName": "value",
-      "parentId": "aeaca388-5782-f624-54f0-900fec9b686c",
-      "id": "06a461ae-ca50-0a8b-c0d3-5ebee54db40a",
-      "name": "For",
-      "declaredClass": "xblox.model.loops.ForBlock",
-      "serializeMe": true,
-      "description": "No Description",
-      "enabled": true,
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0,
-      "items": [
-        "d604471c-c5cf-8997-5be6-907ea0a059bf"
-      ]
-    },
-    {
-      "_containsChildrenIds": [
-        "items"
-      ],
       "group": "On Load",
-      "id": "ebc82354-a3f9-cad0-9d55-43da51e5dd11",
-      "items": [
-        "6baab43e-07b7-61d5-6f42-6721e285aa83"
-      ],
-      "name": "On Key",
-      "event": "",
-      "reference": "",
+      "id": "a23ca388-5782-f624-54f0-900fec9b686c",
+      "name": "On Key2",
+      "event": "shift s",
+      "reference": "{\"reference\":\"\",\"mode\":\"byclass\"}",
       "description": "Triggers when a keyboard sequence has been entered",
       "declaredClass": "xblox.model.events.OnKey",
-      "serializeMe": true,
-      "enabled": true,
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0
-    },
-    {
-      "_containsChildrenIds": [],
-      "parentId": "ebc82354-a3f9-cad0-9d55-43da51e5dd11",
-      "id": "6baab43e-07b7-61d5-6f42-6721e285aa83",
-      "name": "Set CSS",
-      "file": "",
-      "reference": "",
-      "description": "Sets HTML Node CSS",
-      "declaredClass": "xblox.model.html.SetCSS",
       "serializeMe": true,
       "enabled": true,
       "canDelete": true,

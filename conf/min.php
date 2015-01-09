@@ -20,7 +20,8 @@ require (dirname(__FILE__) . DIRECTORY_SEPARATOR . '_base.php');
 /**
  * Override file repository root
  */
-//$XF_PATH = '/PMaster/projects/xbox-app/test/';
+$XF_PATH = '/PMaster/projects/xbox-app/test/';
+
 
 
 
@@ -49,7 +50,7 @@ $XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell,XImageEdit,XZoho,XHTM
 
 //
 $XAPP_COMPONENTS = array(
-	'XBLOX' => false,
+	'XBLOX' => true,
 	'XIDE_VE' => false
 );
 
@@ -104,14 +105,14 @@ $XF_CONFIG = array(
 		"ALLOW_NEW_TABS"        =>  true,
 		"ALLOW_MULTI_TAB"       =>  false,
 		"ALLOW_INFO_VIEW"       =>  false,
-		"ALLOW_LOG_VIEW"        =>  false,
+		"ALLOW_LOG_VIEW"        =>  true,
 		"ALLOW_BREADCRUMBS"     =>  false,
-		"ALLOW_CONTEXT_MENU"    =>  false,
+		"ALLOW_CONTEXT_MENU"    =>  true,
 		"ALLOW_LAYOUT_SELECTOR" =>  true,
 		"ALLOW_SOURCE_SELECTOR" =>  false,
-		"ALLOW_COLUMN_RESIZE"   =>  false,
-		"ALLOW_COLUMN_REORDER"  =>  false,
-		"ALLOW_COLUMN_HIDE"     =>  false,
+		"ALLOW_COLUMN_RESIZE"   =>  true,
+		"ALLOW_COLUMN_REORDER"  =>  true,
+		"ALLOW_COLUMN_HIDE"     =>  true,
 		"ALLOW_MAIN_MENU"       =>  true,
 		"ALLOW_ACTION_TOOLBAR"  =>  true
 	),
@@ -128,9 +129,9 @@ $XF_CONFIG = array(
 /*0*/	0,  //none
 /*1*/	1,  //edit
 /*2*/	1,  //copy
-/*3*/   0,  //move
+/*3*/   1,  //move
 /*4*/   1,  //info
-/*5*/   0,  //download
+/*5*/   1,  //download
 /*6*/   0,  //compress
 /*7*/   1,  //delete
 /*8*/   1,  //rename

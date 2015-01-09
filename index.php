@@ -57,6 +57,8 @@ $XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'xapp' 
 
 define('XAPP_BASEDIR',$XAPP_BASE_DIRECTORY);    //the most important constant
 
+require_once(XAPP_BASEDIR . '/XApp_Service_Entry_Utils.php');
+
 /////////////////////////////////////////////////////////////////
 //
 // 1.1 Default directories and variables
@@ -217,12 +219,12 @@ $XF_RESOURCE_VARIABLES                  = array(
 	/**
 	 *  Adjust global font size
 	 */
-	'GLOBAL_FONT_SIZE'          =>'0.78em',
+	'GLOBAL_FONT_SIZE'          => XApp_Service_Entry_Utils::isMobile() ? '1.1em' : '0.88em',
 	
 	/**
 	 *  Adjust action button icon size
 	 */
-	'ACTION_BUTTON_SIZE'        =>'1.3em'
+	'ACTION_BUTTON_SIZE'        => XApp_Service_Entry_Utils::isMobile() ? '1.5em' : '1.3em'
 
 );
 
