@@ -48,7 +48,8 @@ This a development version. It has many sub modules and needs around 1 GB on the
 - PHP 5.3+ (better 5.4!)
 - PHP : MBString extension
 - PHP : Curl/SSL when using SFTP/WebDav/Dropbox
- 
+
+## Download latest stable release as zip file (uncomress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://github.com/mc007/xbox-app/releases/download/v0.5-RC.2/xbox.zip) 
 
 ## Installation 
 
