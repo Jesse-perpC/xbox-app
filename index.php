@@ -189,7 +189,7 @@ $XF_THEME = _getKey('theme','blitzer');
  *
  */
 $XAPP_COMPONENTS = array(
-	'XBLOX' => true,
+	'XBLOX' => _getKey('xide',false),
 	'XIDE_VE' => _getKey('xide',false)
 );
 
