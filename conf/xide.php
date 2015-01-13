@@ -101,9 +101,9 @@ $XF_CONFIG = array(
 	"PANEL_OPTIONS" => array(
 		"ALLOW_NEW_TABS"        =>  true,
 		"ALLOW_MULTI_TAB"       =>  false,
-		"ALLOW_INFO_VIEW"       =>  false,
+		"ALLOW_INFO_VIEW"       =>  true,
 		"ALLOW_LOG_VIEW"        =>  true,
-		"ALLOW_BREADCRUMBS"     =>  false,
+		"ALLOW_BREADCRUMBS"     =>  true,
 		"ALLOW_CONTEXT_MENU"    =>  true,
 		"ALLOW_LAYOUT_SELECTOR" =>  true,
 		"ALLOW_SOURCE_SELECTOR" =>  true,
@@ -167,3 +167,6 @@ $XF_CONFIG = array(
 		"AUTO_OPEN" => "true"
 	)
 );
+
+$XF_THEME = _getKey('theme','bootstrap');
+
