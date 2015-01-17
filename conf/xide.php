@@ -168,5 +168,6 @@ $XF_CONFIG = array(
 	)
 );
 
-$XF_THEME = _getKey('theme','bootstrap');
+$XF_THEME = _getKey('theme','minimal');
+
 
