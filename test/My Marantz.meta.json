@@ -1,9 +1,6 @@
 {
     "id": "mymarantz",
     "title": "My Marantz",
-    /**
-     * Meta data base, attached to each item
-     */
     "inputs": [
         {
             "chainType": 0,
