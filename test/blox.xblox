@@ -1,7 +1,9 @@
 {
   "blocks": [
     {
-      "_containsChildrenIds": [],
+      "_containsChildrenIds": [
+        "items"
+      ],
       "group": "On Load",
       "id": "aeaca388-5782-f624-54f0-900fec9b686c",
       "name": "On Key",
@@ -10,10 +12,13 @@
       "description": "Triggers when a keyboard sequence has been entered",
       "declaredClass": "xblox.model.events.OnKey",
       "serializeMe": true,
-      "enabled": false,
+      "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0
+      "order": 0,
+      "items": [
+        "bf6c4840-a074-6dc9-70bf-66a516336122"
+      ]
     },
     {
       "_containsChildrenIds": [],
@@ -25,6 +30,23 @@
       "description": "Triggers when a keyboard sequence has been entered",
       "declaredClass": "xblox.model.events.OnKey",
       "serializeMe": true,
+      "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [],
+      "parentId": "aeaca388-5782-f624-54f0-900fec9b686c",
+      "id": "bf6c4840-a074-6dc9-70bf-66a516336122",
+      "name": "Log Message",
+      "level": "error",
+      "message": "return 'asdfasdf';",
+      "type": "XBlox",
+      "host": "this host",
+      "declaredClass": "xblox.model.logging.Log",
+      "serializeMe": true,
+      "description": "No Description",
       "enabled": true,
       "canDelete": true,
       "renderBlockIcon": true,

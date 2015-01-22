@@ -47,8 +47,10 @@ $XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell,XImageEdit,XZoho,XHTM
 
 //
 $XAPP_COMPONENTS = array(
-	'XBLOX' => true,
-	'XIDE_VE' => true
+	'xblox' => true,
+	'xideve' => array(
+		'cmdOffset' => 'xapp/xide/'
+	)
 );
 
 //

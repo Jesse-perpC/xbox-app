@@ -189,8 +189,8 @@ $XF_THEME = _getKey('theme','blitzer');
  *
  */
 $XAPP_COMPONENTS = array(
-	'XBLOX' => _getKey('xide',false),
-	'XIDE_VE' => _getKey('xide',false)
+	'xblox' => _getKey('xblox',false),
+	'xideve' => _getKey('xide',false) ? array('cmdOffset' => 'xapp/xide/') : false
 );
 
 /**

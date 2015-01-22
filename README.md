@@ -38,6 +38,10 @@ Little unstable! There is still a lot of old and rubbish code to be removed. How
 
 [See here a dedicated demo page] (http://pearls-media.com:89/demo)
 
+##Boiler-plate for AMD applications
+
+[See here a dedicated repo](https://github.com/mc007/dojo-boilerplate)
+
 
 ##Important
 
