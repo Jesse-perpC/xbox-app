@@ -111,6 +111,57 @@ index.php?**layout=gallery&open=BurningMan&minimal=true&theme=dot-luv**: Auto op
 
 index.php?**layout=browser&open=Pictures**: Auto open picture folder in browser mode (Dual view with tree for navigation, classics!)
 
+#### Controls : Keyboard
+
+- SPACE : Open Preview
+- CTRL+F1 : Open Mounts
+- F2 : Rename
+- F4 : Edit file
+- F5 : Copy (If main window is open, the destination is set automatically) 
+- F6 : Move
+- F7 : Create directory
+- F8 : Delete
+- F9 : Create file
+
+
+- CTRL/CMD + ENTER : Open selection in main window
+
+- BACKSPACE (Firefox) : Go back in history
+- SHIFT + BACKSPACE (Chrome) : Go back in history
+- DEL : Delete selection
+- CTRL+W (Firefox) : Close last window
+- SHIFT+W (Chrome) : Close last window 
+- SHIFT+UP/DOWN : Multi-Selection 
+- CTRL+A : Select all
+- CTRL+C : Copy selection to clipboard 
+- CTRL+X : Cut selection to clipboard 
+- CTRL+V : Paste selection
+- CTRL+S : Save current editor's content 
+- CTRL+F : Open search
+- CTRL-L : Reload current panel
+
+
+#### Controls Editor
+
+- Ctrl-F / Cmd-F : Start searching 
+- Ctrl-G / Cmd-G : Find next 
+- Ctrl -/+ Change Font Size
+- Shift-Ctrl-G / Shift-Cmd-G : Find previous 
+- Shift-Ctrl-F / Cmd-Option-F : Replace
+- Shift-Ctrl-R / Shift-Cmd-Option-F : Replace all 
+
+
+#### Controls : Mouse
+
+- Right-Click : Open context menu
+- CTRL : Enable copy mode for drag and drop 
+- Uploading : Simply drag files from your file manager into the file panel, you can also just drag an url into file panel for remote downloads
+
+#### Uploading
+
+- Currently only supported via drag'n drop
+
+
   
 ### Open debug version 
 
