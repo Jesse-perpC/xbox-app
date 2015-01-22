@@ -197,6 +197,8 @@ rm -rf "$DIST/client/src/xfile/davinci"
 
 
 rm -rf "$DIST/utils/"
+rm -rf "$DIST/demo/"
+rm -rf "$DIST/test/"
 rm -rf "$DIST/misc/"
 rm -rf "$DIST/build/"
 rm -rf "$DIST/xapp/lib/cache"
