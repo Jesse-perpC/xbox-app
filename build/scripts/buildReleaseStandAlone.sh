@@ -17,7 +17,8 @@ cp -rf $SRC_DIR/* $DIST/
 rm -rf "$DIST/user"
 rm -rf "$DIST/client/.idea"
 
-
+rm -rf "$DIST/experiments"
+rm -rf "$DIST/experiments"
 rm -rf "$DIST/xapp//lib/rpc/_tmp/"
 rm -rf "$DIST/xapp//lib/PHPLinq/"
 rm -rf "$DIST/xapp//lib/lucene/"
@@ -44,7 +45,7 @@ rm -rf "$DIST/client/src/lib"
 rm -rf "$DIST/client/src/xfile/xjoomla"
 rm -rf "$DIST/client/src/xfile/dojo/dojo.js"
 rm -rf "$DIST/client/src/xfile/ext/cm/codemirror.js"
-rm -rf "$DIST/client/src/themes/jQuery"
+
 
 rm -rf "$DIST/xapp/test.php"
 rm -rf "$DIST/xapp/testRPC.php"
@@ -185,7 +186,7 @@ rm -rf "$DIST/client/src/xfileBuild/"
 rm -rf "$DIST/client/src/xfileTheme/"
 rm -rf "$DIST/client/src/css/"
 rm -rf "$DIST/client/src/xfile/theme"
-rm -rf "$DIST/client/src/themes"
+#rm -rf "$DIST/client/src/themes"
 rm -rf "$DIST/client/src/*.sh"
 rm -rf "$DIST/client/src/xfile/davinci"
 rm -rf "$DIST/client/src/xfile/orion"
