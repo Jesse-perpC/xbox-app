@@ -2,6 +2,7 @@
 {
     "id": "mymarantz",
     "title": "My Marantz",
+    "driverType":"tpc",
     "inputs": [
         {
             "chainType": 0,
