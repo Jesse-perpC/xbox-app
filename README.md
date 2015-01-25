@@ -3,6 +3,7 @@ PHP/JS based and full featured file manager
 
 ##Features
  
+ - One page application & full 'Ajax'
  - Full keyboard support ala Midnight or Total-Commander 
  - Multi tab 
  - Code editor with auto-completion for CSS,PHP and Javascript 
@@ -21,7 +22,7 @@ PHP/JS based and full featured file manager
  - Over 20 themes for the file manager and 20 editor themes
  - Visual programming language for extending the plugin easier. Open test/blox.xblox example file (this feature is pre alpha!)
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
- - Thumb resizing and caching for fast browsing large image folders 
+ - Thumb resizing and caching for fast browsing large image folders
  - quite some stuff which i am too lazy to write down
  
  
@@ -110,6 +111,9 @@ index.php?**layout=preview&open=Pictures**: Auto open picture folder in preview 
 index.php?**layout=gallery&open=BurningMan&minimal=true&theme=dot-luv**: Auto open picture folder in gallery mode (split view with cover flow view)
 
 index.php?**layout=browser&open=Pictures**: Auto open picture folder in browser mode (Dual view with tree for navigation, classics!)
+
+index.php?layout=gallery&open=BurningMan@Art-of-Burning-Man-2014_6-640x266.jpg&minimal=true&theme=dot-luv**: Open in gallery mode and open folder BurningMan and open a picture
+
 
 #### Controls : Keyboard
 
