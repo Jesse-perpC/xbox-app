@@ -12,7 +12,7 @@
       "description": "Triggers when a keyboard sequence has been entered",
       "declaredClass": "xblox.model.events.OnKey",
       "serializeMe": true,
-      "enabled": true,
+      "enabled": false,
       "canDelete": true,
       "renderBlockIcon": true,
       "order": 0,

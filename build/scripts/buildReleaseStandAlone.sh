@@ -19,6 +19,7 @@ rm -rf "$DIST/client/.idea"
 
 rm -rf "$DIST/experiments"
 rm -rf "$DIST/experiments"
+rm -rf "$DIST/client/src/xfile/themes"
 rm -rf "$DIST/xapp//lib/rpc/_tmp/"
 rm -rf "$DIST/xapp//lib/PHPLinq/"
 rm -rf "$DIST/xapp//lib/lucene/"
