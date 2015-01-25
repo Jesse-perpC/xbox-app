@@ -180,11 +180,11 @@ This will create single layer file which contains all Dojo based in src/xfile/do
 - Client-Release version : see in client/src/xfile/xbox/resources-release.json
 
 #### Footprint
-- Javascript total: 2.8MB (1.8MB Core + 1MB plugins) unzipped or 1.1 MB when gzipped
+- Javascript total: 2.8MB (1.4MB Core + 1MB plugins) unzipped or 0.6 MB when gzipped
 - CSS total: 50KB
 - Images: 20KB - 50KB. We do optimize it further
 - XHR: 50KB for the initial load(gzipped)
-- Total: 1.4MB gzipped
+- Total: 750kb gzipped
 
 There are further optimizations in progress but we don't think we can get the minimal version below 700KB!
 
