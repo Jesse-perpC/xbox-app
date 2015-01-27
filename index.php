@@ -264,35 +264,35 @@ $XF_CONFIG = array(
 	 * Allowed actions in UI and the server. Please check xapp/commander/App.php in the auth-delegate::authorize!
 	 */
 	"ALLOWED_ACTIONS" => array(
-		/*0*/	0,  //none
-		/*1*/	1,  //edit : not used!
-		/*2*/	1,  //copy
-		/*3*/   1,  //move
-		/*4*/   1,  //info
-		/*5*/   1,  //download: images and file content
-		/*6*/   1,  //compress
-		/*7*/   1,  //delete
-		/*8*/   1,  //rename
-		/*9*/   1,  //dnd
-		/*10*/  1,  //copy &paste
-		/*11*/  1,  //open
-		/*12*/  1,  //reload
-		/*13*/  1,  //preview
-		/*14*/  1,  //reserved
-		/*15*/  1,  //insert image
-		/*16*/  1,  //new file
-		/*17*/  1,  //new dir
-		/*18*/  1,  //upload
-		/*19*/  1,  //read //not used
-		/*20*/  1,  //write
-		/*21*/  1,  //plugins
-		/*22*/  1,  //custom
-		/*23*/  1,  //find
-		/*24*/  1,  //perma link: not used
-		/*25*/  1,  //add mount
-		/*26*/  1,  //remove mount
-		/*27*/  1,  //edit mount
-		/*28*/  1   //perspective
+/*0*/	0,  //none
+/*1*/	1,  //edit : not used!
+/*2*/	1,  //copy
+/*3*/   1,  //move
+/*4*/   1,  //info
+/*5*/   1,  //download: images and file content
+/*6*/   1,  //compress
+/*7*/   1,  //delete
+/*8*/   1,  //rename
+/*9*/   1,  //dnd
+/*10*/  1,  //copy &paste
+/*11*/  1,  //open
+/*12*/  1,  //reload
+/*13*/  1,  //preview
+/*14*/  1,  //reserved
+/*15*/  1,  //insert image
+/*16*/  1,  //new file
+/*17*/  1,  //new dir
+/*18*/  1,  //upload
+/*19*/  1,  //read //not used
+/*20*/  1,  //write
+/*21*/  1,  //plugins
+/*22*/  1,  //custom
+/*23*/  1,  //find
+/*24*/  1,  //perma link: not used
+/*25*/  1,  //add mount
+/*26*/  1,  //remove mount
+/*27*/  1,  //edit mount
+/*28*/  1   //perspective
 
 	),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel

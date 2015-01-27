@@ -69,7 +69,8 @@ require([
    </select>
    <div style="position: absolute; background-color: black; width: 134px; height: 70px; left: 24.5px; top: 165px;"></div>
    <div style="position: absolute; width: 243px; height: 52.75px; left: 24.5px; top: 23.149993896484375px;">
- <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 102.18333870117188px; top: 12.666676103515627px;"></input>
+ 
+ <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 105.05000740234374px; top: 12.666676103515627px;" onclick="alert('helo')"></input>
      <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="ButtonX" iconClass="dijitNoIcon" style="position: absolute; left: 22.00000435058594px; top: 12.666676103515627px;"></input>
    </div>
  <span data-dojo-type="dijit/MenuBar" popupDelay="0" tabIndex="0" style="position: absolute; left: 23px; top: 392px;"><span data-dojo-type="dijit/PopupMenuBarItem" label="Menu 1" iconClass="dijitNoIcon"><span data-dojo-type="dijit/Menu"><span data-dojo-type="dijit/MenuItem" label="Menu Item 1.1"></span><span data-dojo-type="dijit/MenuItem" label="Menu Item 1.2"></span>
