@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-<script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp/'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox/'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide/'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile/'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
+<script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp/'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit-release/dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox/'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore/'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide/'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile/'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
 <script type="text/javascript">
 require([
   "dijit/dijit",
@@ -29,9 +29,6 @@ require([
 <body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" id="myapp" data-maq-appstates="{}">
 
  <script type="text/javascript">
-		 
-		 
-		 
 		 /**
 		  * Minimum settings
 		  */
@@ -44,34 +41,26 @@ require([
 		 		]
 		 };
 		 
+		 var startx = function(dfd,bootStrapper,context,settings){
+		 		 //resolved head dfd with fully loaded x-app
+		 		 dfd.resolve({
+		 		 	bootstrap:bootStrapper,
+		 		 	context:context,
+		 		 	settings:settings
+		 		 });
+		 };
 		 
 		 var bootx = function(settings){
-		 	 
-		 	 console.log('boot x application4',settings);
-		 	 
 		 	 var headDfd = new dojo.Deferred();
-		 	 
-		 	 
 		 	 require(['xapp/boot'],function(boot){
-		 	 			
-		 	 			console.error('xapp/boot ready3');
-		 	 			var bootStrap = new boot();
-		 	 			bootStrap.load().then(function(){
-		 	 				console.error('xapp/boot ready inner');
-		 	 			});
-		 	 			
-		 	 			
+		 	 	var bootStrap = new boot();
+		 	 	bootStrap.load().then(function(){
+		 	 		bootStrap.start(settings).then(function(ctx){
+		 	 			startx(headDfd,bootStrap,ctx,xideveSettings);
+		 	 		});
+		 	 	});
 		 	 });
-		 	 
-		 	 
 		 	 return headDfd;
-		 	 /*
-		 	 require(['xide/types'],function(types){
-		 	 		console.log('got type : ' , types);
-		 	 });
-		 	 */
-		 	 
-		 	 
 		 	 
 		 }
 		 
