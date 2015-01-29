@@ -54,6 +54,26 @@
       "renderBlockIcon": true,
       "order": 0,
       "shareTitle": "xlog"
+    },
+    {
+      "_containsChildrenIds": [
+        "_lastResult"
+      ],
+      "group": "On Load",
+      "id": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
+      "method": "console.log('my blockxxx' , this);return this;",
+      "_lastResult": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
+      "shareTitle": "testx",
+      "name": "Run Script",
+      "args": "",
+      "deferred": false,
+      "declaredClass": "xblox.model.code.RunScript",
+      "serializeMe": true,
+      "description": "No Description",
+      "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
     }
   ],
   "variables": []
