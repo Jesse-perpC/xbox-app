@@ -56,13 +56,10 @@
       "shareTitle": "xlog"
     },
     {
-      "_containsChildrenIds": [
-        "_lastResult"
-      ],
+      "_containsChildrenIds": [],
       "group": "On Load",
       "id": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
-      "method": "console.log('my blockxxx' , this);return this;",
-      "_lastResult": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
+      "method": "console.log('my blockxxx ' + this.get('label') , this); return this;",
       "shareTitle": "testx",
       "name": "Run Script",
       "args": "",
@@ -71,6 +68,65 @@
       "serializeMe": true,
       "description": "No Description",
       "enabled": true,
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [
+        "items"
+      ],
+      "group": "On Load",
+      "parentId": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
+      "id": "f93d8131-da6f-5422-ce0c-3ea4d4578efb",
+      "method": "console.log('run red');",
+      "name": "Run Script",
+      "args": "",
+      "deferred": false,
+      "declaredClass": "xblox.model.code.RunScript",
+      "serializeMe": true,
+      "description": "No Description",
+      "enabled": true,
+      "shareTitle": "",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0,
+      "items": [
+        "fc4bbef8-5783-b49b-4d05-f279c6504d84",
+        "642ef54f-8ae0-0fa3-da70-ba9d2defaefa"
+      ]
+    },
+    {
+      "_containsChildrenIds": [],
+      "parentId": "f93d8131-da6f-5422-ce0c-3ea4d4578efb",
+      "id": "fc4bbef8-5783-b49b-4d05-f279c6504d84",
+      "value": "background-color:red;",
+      "name": "Set Style",
+      "reference": "",
+      "description": "Sets HTML Node Style Attribute",
+      "mode": 1,
+      "declaredClass": "xblox.model.html.SetStyle",
+      "serializeMe": true,
+      "enabled": true,
+      "shareTitle": "",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [],
+      "parentId": "f93d8131-da6f-5422-ce0c-3ea4d4578efb",
+      "id": "642ef54f-8ae0-0fa3-da70-ba9d2defaefa",
+      "name": "Run Block",
+      "file": "",
+      "method": "",
+      "args": "",
+      "block": "",
+      "description": "Runs another Block",
+      "declaredClass": "xblox.model.code.RunBlock",
+      "serializeMe": true,
+      "enabled": true,
+      "shareTitle": "",
       "canDelete": true,
       "renderBlockIcon": true,
       "order": 0

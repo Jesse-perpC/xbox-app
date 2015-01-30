@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
 
+
     <script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit-release/dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
     <script type="text/javascript">
         require([
@@ -54,11 +55,12 @@
     var runBlox = function(path,id,context){
     	appContext.application.runBlox(path,id,context);
     };
-		var runx = function(ctx,expression,args){
-			var _function = new Function("{" +expression+"; }");
-			var parsed = _function.call(ctx,args);
-			return parsed;
-		};
+
+    var runx = function(ctx,expression,args){
+        var _function = new Function("{" +expression+"; }");
+        var parsed = _function.call(ctx,args);
+        return parsed;
+    };
 
     var startx = function (dfd, bootStrapper, context, settings) {
 
@@ -84,14 +86,13 @@
             });
         });
 
+
         return headDfd;
 
     }
 
 </script>
-
-
-<input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 53.00000435058594px; top: 33.00000435058594px;" title="test" ondblclick="debugger;" onmouseover="console.log('nada22',this);" onmouseout="runBlox('root://min.xblox ','feb8b50f-df8b-9277-c4a9-dcc407452edd',this)" onclick="alert('asdfasdf');return true;"></input>
-
+<div type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 77.99587488174438px; top: 66px;"></div>
+<input type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="mkBlue" iconClass="dijitNoIcon" style="position: absolute; left: 66.9833px; top: 116px;" onclick="runBlox('root://min.xblox','f93d8131-da6f-5422-ce0c-3ea4d4578efb',this)"></input>
 </body>
 </html>
