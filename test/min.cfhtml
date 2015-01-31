@@ -52,8 +52,8 @@
     
     var appContext = null;
     
-    var runBlox = function(path,id,context){
-    	appContext.application.runBlox(path,id,context);
+    var runBlox = function(path,id,context,settings){
+    	appContext.application.runBlox(path,id,context,settings);
     };
 
     var runx = function(ctx,expression,args){
@@ -92,7 +92,7 @@
     }
 
 </script>
-<div type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 77.99587488174438px; top: 66px;"></div>
-<input type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="mkBlue" iconClass="dijitNoIcon" style="position: absolute; left: 66.9833px; top: 116px;" onclick="runBlox('root://min.xblox','f93d8131-da6f-5422-ce0c-3ea4d4578efb',this)"></input>
+<div type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 78.00000435058594px; top: 64.00000435058594px;"></div>
+<input type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="mkBlue" iconClass="dijitNoIcon" style="position: absolute; left: 78.00000435058594px; top: 116px;" onclick="runBlox('root://min.xblox','f93d8131-da6f-5422-ce0c-3ea4d4578efb',this,{&quot;method&quot;:&quot;console.log('run blue');&quot;})"></input>
 </body>
 </html>
