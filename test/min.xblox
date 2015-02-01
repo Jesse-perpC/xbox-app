@@ -130,6 +130,23 @@
       "canDelete": true,
       "renderBlockIcon": true,
       "order": 0
+    },
+    {
+      "_containsChildrenIds": [],
+      "group": "On Load",
+      "id": "1b89f7b2-8367-cc0c-8fb6-b37ee5ef5d63",
+      "method": "console.log('run node-test');\nvar l = 100000,\nresult = 0;\nfor(var i = 0 ; i < l ; i++){\n\t\n\tvar c = i+10*1;\n\tresult = c*2;\n}\nreturn c;\n\n\n",
+      "name": "Run Script",
+      "args": "",
+      "deferred": false,
+      "declaredClass": "xblox.model.code.RunScript",
+      "serializeMe": true,
+      "description": "No Description",
+      "enabled": true,
+      "shareTitle": "",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
     }
   ],
   "variables": []

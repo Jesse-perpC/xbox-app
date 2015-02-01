@@ -143,7 +143,7 @@ $XF_CONFIG = array(
 /*15*/  0,  //insert image
 /*16*/  1,  //new file
 /*17*/  1,  //new dir
-/*18*/  0,  //upload
+/*18*/  1,  //upload
 /*19*/  1,  //read
 /*20*/  1,  //write
 /*21*/  1,  //plugins
@@ -153,7 +153,7 @@ $XF_CONFIG = array(
 /*25*/  0,  //add mount
 /*26*/  0,  //remove mount
 /*27*/  0,  //edit mount
-/*28*/  0   //perspective
+/*28*/  1   //perspective
 
 ),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
