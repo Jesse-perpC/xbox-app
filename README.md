@@ -20,10 +20,18 @@ PHP/JS based and full featured file manager
  - Supports folder locations outside of the Apache http docs folder
  - Logging panel with filters
  - Over 20 themes for the file manager and 20 editor themes
- - Visual programming language for extending the plugin easier. Open test/blox.xblox example file (this feature is pre alpha!)
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
  - Thumb resizing and caching for fast browsing large image folders
  - quite some stuff which i am too lazy to write down
+ 
+## Additional components
+
+- _XBlox_, a Visual programming language for extending the file manager and other things easier. Open test/blox.xblox example file (this feature is pre alpha!)
+- Visual HTML editor for Dojo (aka Maqetta), currently support also _XBlox_ for widget/node properties
+- Node.JS service management and shell
+- Hot-code replacement for AMD/Dojo apps
+
+
  
  
 ##Status
@@ -65,23 +73,20 @@ This a development version. It has many sub modules and needs around 1 GB on the
 
 ### Soft Checkout (Uses pre-compiled Javascript version)
 
-``` bash 
-    git clone https://github.com/mc007/xbox-app
-    cd xbox-app
-    git submodule init
-    git submodule update    
-```
+    
+    $git clone https://github.com/mc007/xbox-app
+    $cd xbox-app
+    $git submodule init
+    $git submodule update    
+
 ### Soft Checkout in one line
-``` bash 
-    git clone https://github.com/mc007/xbox-app && cd xbox-app && git submodule init && git submodule update    
-```
+
+    $git clone https://github.com/mc007/xbox-app && cd xbox-app && git submodule init && git submodule update
 
 ### Full Checkout (Checks out full tree: 1GB+)
 
-``` bash 
-    git clone --recursive https://github.com/mc007/xbox-app
-    git submodule foreach --recursive git checkout master
-```
+    $git clone --recursive https://github.com/mc007/xbox-app
+    $git submodule foreach --recursive git checkout master
 
 ###Installation via one-click installer (downloads zip and un-compresses it)
 
@@ -173,10 +178,10 @@ http://localhost/xbox-app/index.php?debug=true
 
 ### Build Javascript main file
 
-``` bash
-    cd client/src
-    sh buildstandalone.sh    
-```
+    
+    $cd client/src
+    $sh buildstandalone.sh    
+
 This will create single layer file which contains all Dojo based in src/xfile/dojo/xbox.js!
 
 ### Resources (Javascript/CSS/Fonts,...)
@@ -215,17 +220,18 @@ the **BODY** part comes from:
 
 
 ### Update all
-``` bash
-cd xbox-app
-git submodule foreach git pull origin master
-```
+
+    $bash
+    $cd xbox-app
+    $git submodule foreach git pull origin master
+
 
 ### Contribute
 open a Github issue and let me know :-)
 
 ###Roadmap
-1. Update to ibm-js framework
-2. remove all Dijit stuff
+1. Update to ibm-js framework: post-poned
+2. remove all Dijit stuff: post-poned
 3. Code cleanup
 4. Create a Node.js server version
 5. Add proper test units 
