@@ -19,7 +19,7 @@
       "items": [
         "bf6c4840-a074-6dc9-70bf-66a516336122"
       ],
-      "shareTitle": "xxx"
+      "shareTitle": ""
     },
     {
       "_containsChildrenIds": [],
@@ -59,8 +59,8 @@
       "_containsChildrenIds": [],
       "group": "On Load",
       "id": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
-      "method": "console.log('my blockxxx ' + this.get('label') , this); return this;",
-      "shareTitle": "testx",
+      "method": "console.log('my blockxxx ' + this.get('label') , this); this.set('label','new name'); return this;\n",
+      "shareTitle": "log me button",
       "name": "Run Script",
       "args": "",
       "deferred": false,
@@ -73,9 +73,7 @@
       "order": 0
     },
     {
-      "_containsChildrenIds": [
-        "items"
-      ],
+      "_containsChildrenIds": [],
       "group": "On Load",
       "parentId": "feb8b50f-df8b-9277-c4a9-dcc407452edd",
       "id": "f93d8131-da6f-5422-ce0c-3ea4d4578efb",
@@ -90,52 +88,13 @@
       "shareTitle": "",
       "canDelete": true,
       "renderBlockIcon": true,
-      "order": 0,
-      "items": [
-        "fc4bbef8-5783-b49b-4d05-f279c6504d84",
-        "642ef54f-8ae0-0fa3-da70-ba9d2defaefa"
-      ]
-    },
-    {
-      "_containsChildrenIds": [],
-      "parentId": "f93d8131-da6f-5422-ce0c-3ea4d4578efb",
-      "id": "fc4bbef8-5783-b49b-4d05-f279c6504d84",
-      "value": "background-color:red;",
-      "name": "Set Style",
-      "reference": "",
-      "description": "Sets HTML Node Style Attribute",
-      "mode": 1,
-      "declaredClass": "xblox.model.html.SetStyle",
-      "serializeMe": true,
-      "enabled": true,
-      "shareTitle": "",
-      "canDelete": true,
-      "renderBlockIcon": true,
-      "order": 0
-    },
-    {
-      "_containsChildrenIds": [],
-      "parentId": "f93d8131-da6f-5422-ce0c-3ea4d4578efb",
-      "id": "642ef54f-8ae0-0fa3-da70-ba9d2defaefa",
-      "name": "Run Block",
-      "file": "",
-      "method": "",
-      "args": "",
-      "block": "",
-      "description": "Runs another Block",
-      "declaredClass": "xblox.model.code.RunBlock",
-      "serializeMe": true,
-      "enabled": true,
-      "shareTitle": "",
-      "canDelete": true,
-      "renderBlockIcon": true,
       "order": 0
     },
     {
       "_containsChildrenIds": [],
       "group": "On Load",
       "id": "1b89f7b2-8367-cc0c-8fb6-b37ee5ef5d63",
-      "method": "console.log('run node-test');\nvar l = 100000,\nresult = 0;\nfor(var i = 0 ; i < l ; i++){\n\t\n\tvar c = i+10*1;\n\tresult = c*2;\n}\nreturn c;\n\n\n",
+      "method": "console.log('run node-test'); return 3;\n",
       "name": "Run Script",
       "args": "",
       "deferred": false,
@@ -143,6 +102,85 @@
       "serializeMe": true,
       "description": "No Description",
       "enabled": true,
+      "shareTitle": "",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0,
+      "_lastResult": 2
+    },
+    {
+      "_containsChildrenIds": [
+        "items"
+      ],
+      "group": "On Load",
+      "id": "136726db-7b64-87b9-de80-f457f400b820",
+      "shareTitle": "RunScriptLog",
+      "name": "Run Script",
+      "method": "console.log('run script make blue',this);",
+      "args": "",
+      "deferred": false,
+      "declaredClass": "xblox.model.code.RunScript",
+      "enabled": true,
+      "serializeMe": true,
+      "description": "No Description",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0,
+      "items": [
+        "ed0a2129-4963-8e0b-89e7-171e2bdca658"
+      ]
+    },
+    {
+      "_containsChildrenIds": [],
+      "parentId": "136726db-7b64-87b9-de80-f457f400b820",
+      "id": "ed0a2129-4963-8e0b-89e7-171e2bdca658",
+      "name": "Set Style",
+      "reference": "",
+      "description": "Sets HTML Node Style Attribute",
+      "value": "background-color:blue;",
+      "mode": 2,
+      "declaredClass": "xblox.model.html.SetStyle",
+      "enabled": true,
+      "serializeMe": true,
+      "shareTitle": "",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [
+        "items"
+      ],
+      "group": "On Load",
+      "id": "f0f0b06d-f4b2-a395-63a0-aa2a1b98183f",
+      "items": [
+        "9e5135e6-f0b2-589a-2b5a-825eef2ccd8f"
+      ],
+      "shareTitle": "OnHover",
+      "method": "console.log('on hover');",
+      "name": "Run Script",
+      "args": "",
+      "deferred": false,
+      "declaredClass": "xblox.model.code.RunScript",
+      "enabled": true,
+      "serializeMe": true,
+      "description": "No Description",
+      "canDelete": true,
+      "renderBlockIcon": true,
+      "order": 0
+    },
+    {
+      "_containsChildrenIds": [],
+      "parentId": "f0f0b06d-f4b2-a395-63a0-aa2a1b98183f",
+      "id": "9e5135e6-f0b2-589a-2b5a-825eef2ccd8f",
+      "value": "background-color:yellow;",
+      "name": "Set Style",
+      "reference": "",
+      "description": "Sets HTML Node Style Attribute",
+      "mode": 2,
+      "declaredClass": "xblox.model.html.SetStyle",
+      "enabled": true,
+      "serializeMe": true,
       "shareTitle": "",
       "canDelete": true,
       "renderBlockIcon": true,

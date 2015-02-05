@@ -184,13 +184,15 @@ $XF_THEME = _getKey('theme','blitzer');
 /**
  * $XAPP_COMPONENTS describes the components to be loaded.
  * There is currently:
- * 1. XBLOX: a visual programming language to extend the file manager with a built-in macro system
- * 2. XIDE_VE: a visual editor for HTML - Authoring (Dojo only). This needs currently &debug=true to run.
+ * 1. xblox: a visual programming language to extend the file manager with a built-in macro system
+ * 2. xideve: a visual editor for HTML - Authoring (Dojo only for now). This needs currently &debug=true to run
+ * 3. xnode: tools to manager Node.JS services in xide applications
  *
  */
 $XAPP_COMPONENTS = array(
 	'xblox' => _getKey('xblox',false),
-	'xideve' => _getKey('xide',false) ? array('cmdOffset' => 'xapp/xide/') : false
+	'xideve' => _getKey('xide',false) ? array('cmdOffset' => 'xapp/xide/') : false,
+	'xnode' =>_getKey('xnode',false)
 );
 
 /**

@@ -1,37 +1,40 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8"/>
-
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
+    <script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'has':{'xblox':true},'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'xblox','location':'../../lib/xblox'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
     <script type="text/javascript">
         require([
-            "dijit/dijit",
-            "dojo/Deferred",
-            "dojo/parser",
-            "dijit/form/Button",
-            "maqetta/space",
-            "maqetta/AppStates"
-        ]);
+  "dijit/dijit",
+  "dojo/Deferred",
+  "dojo/parser",
+  "dijit/form/Button",
+  "maqetta/space",
+  "maqetta/AppStates",
+  "dijit/form/HorizontalSlider",
+  "dijit/form/HorizontalRule",
+  "dijit/form/HorizontalRuleLabels",
+  "dijit/layout/BorderContainer",
+  "dijit/layout/AccordionContainer",
+  "dijit/layout/ContentPane",
+  "xblox/RunScript"
+]);
     </script>
 
     <style>
         @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/claro/document.css";
         @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/claro/claro.css";
         @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/jquery/blitzer/jquery-ui.css";
-    </style>
-    <script type="text/javascript" src="testx.js"></script>
-    <script type="text/javascript" src="testx.js"></script>
-    <script type="text/javascript" src="testx.js"></script>
-    <script type="text/javascript" src="testx.js"></script>
-    <script type="text/javascript" src="testx.js"></script>
-    <script type="text/javascript" src="testx.js"></script>
+
+  </style>
+
   </head>
 
 
 <body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" id="myapp" data-maq-appstates="{}">
+
 
 <script type="text/javascript">
 
@@ -82,16 +85,14 @@
                 });
             });
         });
-
-
         return headDfd;
-
     }
 
 </script>
-<div type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 78.00000435058594px; top: 64.00000435058594px;"></div>
-<input type="button" data-dojo-type="dijit/form/Button" title="test2" intermediateChanges="false" label="mkBlue" iconClass="dijitNoIcon" style="position: absolute; left: 78.00000435058594px; top: 116px;" onclick="console.error('asdf')"/>
-<div style="width: 110px; height: 26px;" onclick="console.log('test')" onmouseover="console.log('or')">
-  test</div>
+<div type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 58.00000435058594px; top: 105.08333259765625px;">
+  <div style="position:relative" data-dojo-type="xblox/RunScript" ignorePosition="true" blockid="136726db-7b64-87b9-de80-f457f400b820" scopeid="cbbef3ea-6913-ae19-44ef-9b4a98d48f77" script="Run Script" targetEvent="mouseover" block="root://min.xblox"></div>
+</div>
 </body>
+
 </html>
+
