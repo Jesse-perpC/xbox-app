@@ -6,7 +6,7 @@
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xblox.png)
 
 
-**Working on code online becomes a pleasure. We added ACE with its full features set like auto-completion!**
+**Working on code online becomes a pleasure. We added ACE with its full features set like auto-completion, soon fully Dojo aware**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/screenshot-1.jpg)
 
 
@@ -15,7 +15,6 @@
 
 **Expressions for XBLOX scripts, you can also use to write simple scripts for onclick,..**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide21.png)
-
 
 **Style multiple properties and widgets with one block**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide20.png)
