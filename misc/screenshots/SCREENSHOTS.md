@@ -13,7 +13,7 @@
 **XIDE & XBLOX in action, wiring real device protocols to widgets with one drag and drop action**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/devices.png)
 
-**Expressions for XBLOX scripts**
+**Expressions for XBLOX scripts, you can also use to write simple scripts for onclick,..**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide21.png)
 
 
