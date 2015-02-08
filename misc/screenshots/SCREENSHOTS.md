@@ -24,7 +24,7 @@
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide16.png)
 
 **Save your scripts (behaviours) to a shared library, on 12 cloud hosting providers: SFTP/DropBox,...**
-![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide17.png)
+![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/x17.png)
 
 **Drag file dependencies in your document. js, packages, css, images**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide19.png)
