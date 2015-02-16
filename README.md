@@ -26,18 +26,19 @@ PHP/JS based and full featured file manager
  
 ## Additional components
 
-- _XBlox_, a Visual programming language for extending the file manager and other things easier. Open test/blox.xblox example file (this feature is pre alpha!)
-- Visual HTML editor for Dojo (aka Maqetta), currently support also _XBlox_ for widget/node properties
-- Node.JS service management and shell
-- Hot-code replacement for AMD/Dojo apps
+- _XBlox_, a Visual programming language for extending the file manager and other things easier. Open test/blox.xblox example file (this feature is pre alpha!). You need to open the file manager
+  explicitly via url parameter: index.php?profile=xblox&debug=true or index.php?profile=xode&debug=true. Currently there is are release versions of it. 
+- Visual HTML editor for Dojo (aka Maqetta), currently support also _XBlox_ for widget/node properties. Same as xblox: You need to open the file manager
+  explicitly via url parameter: index.php?profile=xblox&debug=true or index.php?profile=xode&debug=true. Currently there is are release versions of it.
 
+- Node.JS service management and shell. This feature is not activated yet. 
+- Hot-code replacement for AMD/Dojo apps. For those folks who know :-)
 
- 
- 
 ##Status
 
-Little unstable! There is still a lot of old and rubbish code to be removed. However, this project is under active development and not yet official released.
 
+File manager: little unstable! There is still a lot of old and rubbish code to be removed. However, this project is 
+under active development and not yet official released. 
 
 ##Screenshots
 
