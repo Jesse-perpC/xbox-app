@@ -63,9 +63,14 @@ This a development version. It has many sub modules and needs around 1 GB on the
 - PHP : MBString extension
 - PHP : Curl/SSL when using SFTP/WebDav/Dropbox
 
-## Download latest stable release as zip file (uncomress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://github.com/mc007/xbox-app/releases/download/v0.5-RC.2/xbox.zip) 
+
+
 
 ## Installation 
+
+### Download latest stable release as zip file (uncompress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://github.com/mc007/xbox-app/releases/download/v0.5-RC.2/xbox.zip)
+
+### Download latest version as zip file (uncompress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://raw.githubusercontent.com/mc007/xbox-app/master/DIST/xbox.zip)
 
 ### Quick installation without any Git
  
@@ -231,8 +236,8 @@ the **BODY** part comes from:
 open a Github issue and let me know :-)
 
 ###Roadmap
-1. Update to ibm-js framework: post-poned
-2. remove all Dijit stuff: post-poned
+1. Update to ibm-js framework: in progress
+2. remove all Dijit stuff: postponed
 3. Code cleanup
 4. Create a Node.js server version
 5. Add proper test units 
