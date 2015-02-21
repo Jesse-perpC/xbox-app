@@ -13,6 +13,7 @@ mkdir -p $DIST
 ###### EXPORT LATEST VERSION FROM SVN
 cp -rf $SRC_DIR/* $DIST/
 
+rm -rf "$DIST/experiments"
 
 rm -rf "$DIST/user"
 rm -rf "$DIST/client/.idea"
@@ -306,7 +307,7 @@ find . -name *.sh* -exec rm -rf '{}' ';'
 
 
 
-zip -9 -q -r "xbox.zip" -x *experiments* ./*
+zip -9 -q -r "xbox.zip" ./*
 
 #cp -f "xbox.zip" "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
 #chmod 755 "/var/www/vhosts/pearls-media.com/httpdocs/xbox.zip"
