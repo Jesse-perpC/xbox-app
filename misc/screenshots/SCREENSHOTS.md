@@ -28,6 +28,10 @@
 **Drag file dependencies in your document: js, packages, css, images,...**
 ![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide19.png)
 
+**Fun stuff**
+![XBLOX](https://raw.githubusercontent.com/mc007/xbox-app/master/misc/screenshots/xide28.png)
+
+
 Please browse the misc/screenshot folder for more!
 
 
