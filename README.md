@@ -68,7 +68,7 @@ This a development version. It has many sub modules and needs around 1 GB on the
 
 ## Installation 
 
-### Download latest stable release as zip file (uncompress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://github.com/mc007/xbox-app/releases/download/v0.5-RC.2/xbox.zip)
+### Download latest stable release as zip file (uncompress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://github.com/mc007/xbox-app/releases/download/v0.6/xbox.zip)
 
 ### Download latest version as zip file (uncompress in a folder, adjust all in index.php and xapp/Commander/Users.php): [here](https://raw.githubusercontent.com/mc007/xbox-app/master/DIST/xbox.zip)
 
