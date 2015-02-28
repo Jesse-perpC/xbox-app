@@ -92,7 +92,7 @@ $XF_DEFAULT_PROFILE =  'default';
  * If this file exists, this profile is the last override. This pass enables you to run your own configuration with a developer distribution.
  * the problem is that git pull won't work anymore as soon you did change this file or the conf/default.php.
  */
-$XF_CUSTOM_PROFILE = _getKey('profile','custom');
+$XF_CUSTOM_PROFILE = XApp_Service_Utils::_getKey('profile','custom');
 
 
 ///////////////////////////////////////////////////////////////////
@@ -171,7 +171,7 @@ $XF_NODE_FLAGS = XF_DIR_OPTION_SHOW_ISDIR |
 /**
  * $XF_PROHIBITED_PLUGINS: prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
  */
-$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XSVN,XLESS,XHTMLEditor,XZoho');
+$XF_PROHIBITED_PLUGINS = XApp_Service_Utils::_getKey('disabledPlugins','XSVN,XLESS,XHTMLEditor,XZoho');
 
 /**
  * $XF_THEME defines the jQuery theme, append the url by &theme=dot-luv ! You can choose from :
@@ -180,7 +180,7 @@ $XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XSVN,XLESS,XHTMLEditor,XZoho
  * trontastic,ui-darkness,ui-lightness,vader
  * see http://jqueryui.com/themeroller/ for more!
  */
-$XF_THEME = _getKey('theme','blitzer');
+$XF_THEME = XApp_Service_Utils::_getKey('theme','blitzer');
 
 /**
  * $XAPP_COMPONENTS describes the components to be loaded.
@@ -191,9 +191,9 @@ $XF_THEME = _getKey('theme','blitzer');
  *
  */
 $XAPP_COMPONENTS = array(
-	'xblox' => _getKey('xblox',false),
-	'xideve' => _getKey('xide',false) ? array('cmdOffset' => 'xapp/xide/') : false,
-	'xnode' =>_getKey('xnode',false)
+	'xblox' => XApp_Service_Utils::_getKey('xblox',false),
+	'xideve' => XApp_Service_Utils::_getKey('xide',false) ? array('cmdOffset' => 'xapp/xide/') : false,
+	'xnode' =>XApp_Service_Utils::_getKey('xnode',false)
 );
 
 /**
