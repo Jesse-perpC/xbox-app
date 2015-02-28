@@ -387,6 +387,7 @@ function _sanitize_key( $key ) {
  * @return string
  */
 function _getKey($key,$default){
+
 	if(isset($_GET[$key])){
 		return _sanitize_key($_GET[$key]);
 	}
