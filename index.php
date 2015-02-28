@@ -58,6 +58,7 @@ $XAPP_BASE_DIRECTORY =  $ROOT_DIRECTORY_ABSOLUTE . DIRECTORY_SEPARATOR . 'xapp' 
 define('XAPP_BASEDIR',$XAPP_BASE_DIRECTORY);    //the most important constant
 
 require_once(XAPP_BASEDIR . '/XApp_Service_Entry_Utils.php');
+require_once(XAPP_BASEDIR . '/Service/Utils.php');
 
 /////////////////////////////////////////////////////////////////
 //
