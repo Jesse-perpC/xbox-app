@@ -227,7 +227,10 @@ $XF_RESOURCE_VARIABLES                  = array(
 	/**
 	 *  Adjust action button icon size
 	 */
-	'ACTION_BUTTON_SIZE'        => XApp_Service_Entry_Utils::isMobile() ? '1.5em' : '1.3em'
+	'ACTION_BUTTON_SIZE'        => XApp_Service_Entry_Utils::isMobile() ? '1.5em' : '1.3em',
+
+
+	'PACKAGE_CONFIG'            => 'run-release-debug'
 
 );
 

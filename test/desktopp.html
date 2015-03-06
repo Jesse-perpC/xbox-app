@@ -4,10 +4,8 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-<script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'xblox','location':'../../lib/xblox'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile'},{'name':'xwire','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xwire'},{'name':'delite','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/delite'},{'name':'deliteful','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/deliteful'},{'name':'decor','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/decor'},{'name':'dpointer','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/dpointer'},{'name':'dcl','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/dcl'},{'name':'requirejs-dplugins','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-dplugins'},{'name':'requirejs-domready','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-domready'},{'name':'requirejs-text','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-text'},{'name':'jquery','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/jquery'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
+<script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp/'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
 <script type="text/javascript">
-
-
 
 require([
   "dijit/dijit",
@@ -28,7 +26,6 @@ require([
   "dijit/form/HorizontalRule",
   "dijit/form/HorizontalRuleLabels",
   "dijit/form/ComboBox",
-  "clipart/Twitter",
   "dijit/form/DateTextBox",
   "dijit/form/ToggleButton",
   "dijit/layout/TabContainer",
@@ -47,15 +44,15 @@ require([
 </head>
 
 
-<body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" id="myapp">
+<body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" id="myapp" data-maq-appstates="{}">
  <script type="text/javascript">
 		 var xide_variables ={
 
 		 };
 	</script>
-
+ <div data-dojo-type="dijit/layout/ContentPane" title="Pane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" style="border: 1px solid black; background-color: white; box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -moz-box-sizing: border-box; left: 0px; top: 0px; width: 100%; height: 100%;">
    <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button" iconClass="dijitNoIcon" style="position: absolute; left: 88.19054985046387px; top: 343px;"></input>
-   <div data-dojo-type="dijit/form/HorizontalSlider" value="55.67041704361366" intermediateChanges="false" showButtons="false" maximum="98" discreteValues="Infinity" style="padding: 1em; position: absolute; height: auto; width: 246px; left: 43px; top: 251px;">
+   <div data-dojo-type="dijit/form/HorizontalSlider" value="100" intermediateChanges="false" maximum="98" discreteValues="Infinity" style="padding: 1em; position: absolute; height: auto; width: 246px; left: 43px; top: 251px;" showButtons="false">
      <div data-dojo-type="dijit/form/HorizontalRule" count="5" container="bottomDecoration" style="height: 5px;"></div>
      <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" labels="0%,50%,100%" style="height: 20px;"></ol>
    </div>
@@ -68,8 +65,8 @@ require([
        Item 3</option>
    </select>
    <div style="position: absolute; background-color: black; width: 134px; height: 70px; left: 24.5px; top: 165px;"></div>
-   <div style="position: absolute; width: 243px; height: 52.75px; left: 25.833328247070312px; top: 41.15px;">
-
+   <div style="position: absolute; width: 243px; height: 52.75px; left: 24.5px; top: 23.149993896484375px;">
+ 
  <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 105.05000740234374px; top: 12.666676103515627px;" onclick="alert('helo')"></input>
      <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="ButtonX" iconClass="dijitNoIcon" style="position: absolute; left: 22.00000435058594px; top: 12.666676103515627px;"></input>
    </div>
@@ -78,4 +75,9 @@ require([
    </span><span data-dojo-type="dijit/PopupMenuBarItem" label="Menu 2" iconClass="dijitNoIcon"><span data-dojo-type="dijit/Menu"><span data-dojo-type="dijit/MenuItem" label="Menu Item 2.1"></span><span data-dojo-type="dijit/MenuItem" label="Menu Item 2.2"></span>
    </span>
    </span>
-   </span></body></html>
+   </span><span data-dojo-type="dijit/layout/TabContainer" style="min-width: 1em; min-height: 1em; position: absolute; left: 21px; top: 479px; width: 271px; height: 109px;" controllerWidget="dijit.layout.TabController">
+<div data-dojo-type="dijit/layout/ContentPane" title="Tab 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" doLayout="false"></div>
+<div data-dojo-type="dijit/layout/ContentPane" title="Tab 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" doLayout="false"></div>
+</span></div>
+</body>
+ </html>

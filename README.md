@@ -243,3 +243,7 @@ open a Github issue and let me know :-)
 5. Add proper test units 
 6. ...
 
+
+###Others
+
+http://localhost/xbox-app/?theme=blitzer&rtConfig=debug&pConfig=run-release-release&profile=xide

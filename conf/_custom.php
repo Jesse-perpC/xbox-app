@@ -50,36 +50,24 @@ require (dirname(__FILE__) . DIRECTORY_SEPARATOR . '_base.php');
 //	'XIDE_VE' => _getKey('xide',false)
 //);
 
-//
-//  Define extra variables for client rendering. This array will override existing variables (see xapp/commander/App near '$XAPP_RELATIVE_VARIABLES')
-//  The resource variables go into the the client side resource manager 'xide.manager.ResourceManager'
-//
+/**
+ * Define extra variables for client rendering. This array will override existing variables (see xapp/commander/App near '$XAPP_RELATIVE_VARIABLES')
+ * The resource variables go into the the client side resource manager 'xide.manager.ResourceManager'
+ */
 /*
 $XF_RESOURCE_VARIABLES                  = array(
-	//
-	//  This is the user name automatically filled into the login form(client/xfile/xbox/login.html) , you may set this to ''
-	//  Notice: this isn't setting the user name in the user database (xapp/commander/Users.php)
-	//
-	//
+
 	'FILLED_USER_NAME'          => 'admin',
-	//
-	//  This is the password automatically filled into the login form(client/xfile/xbox/login.html), you may set this to ''
-	//  Notice: this isn't setting the user password in the user database (xapp/commander/Users.php)
-	//
+
 	'FILLED_PASSWORD'           => 'asdasd',
-	//
-	// Pass the enabled components
-	//
+
 	'COMPONENTS'                => json_encode($XAPP_COMPONENTS),
 
-	//
-	//Adjust global font size
-	//
-	'GLOBAL_FONT_SIZE'          =>'0.78em',
-	//
-	//  Adjust action button icon size
-	//
-	'ACTION_BUTTON_SIZE'        =>'1.3em'
+	'GLOBAL_FONT_SIZE'          => XApp_Service_Entry_Utils::isMobile() ? '1.1em' : '0.88em',
+
+	'ACTION_BUTTON_SIZE'        => XApp_Service_Entry_Utils::isMobile() ? '1.5em' : '1.3em'
+
+	'PACKAGE_CONFIG'            => 'run-release-debug'
 
 );
 */

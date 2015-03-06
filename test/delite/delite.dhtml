@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <script type="text/javascript">
+        require([
+  "delite/register",
+  "deliteful/Button",
+  "xblox/RunScript",
+  "deliteful/Slider",
+  "deliteful/Combobox",
+  "deliteful/Checkbox",
+  "deliteful/RadioButton"
+]);
+    </script>
+<style>
+  .group {
+    margin : 20px;
+    padding : 10px;
+    border : 1px solid gray;
+    border-radius : 6px;
+}
+
+  .d-icon-phone::before {
+    content : "\260E";
+    padding-right : 4px;
+}
+
+  .d-big-icon {
+    font-size : 120%;
+}
+
+  .d-button-green {
+    
+  /* Default style */
+background-color : #47D147;
+    color : white;
+    border-color : #6FBF6F;
+}
+
+  .d-button-green:focus,  .d-button-green:hover {
+    
+  /* Style when the button is focused or hovered */
+background-color : #51F051;
+    color : white;
+    border-color : #4FE34F;
+}
+
+  .d-button-green:active {
+    
+  /* Style when the button is pressed */
+background-color : #55FF55;
+}
+
+
+
+</style>
+
+
+</head>
+ <body data-maq-flow-layout="false" data-maq-comptype="delite" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" id="myapp">
+  <button is="d-button" label="On" id="Power Off" title="Default Label" style="color: white;"></button>
+  <button is="d-button" label="Off" title="Default Label" style="left: 47.33806610107422px; top: 0px;" class="d-button-danger">
+</button>
+  <d-slider value="0">
+  <input value=","></input>
+</d-slider>
+  <d-radio-button name="category" value=""></d-radio-button>
+</body></html>
