@@ -83,8 +83,9 @@ $XF_RESOURCE_VARIABLES                  = array(
 	//
 	//  Adjust action button icon size
 	//
-	'ACTION_BUTTON_SIZE'        =>'1.3em'
+	'ACTION_BUTTON_SIZE'        =>'1.3em',
 
+	'PACKAGE_CONFIG'            => 'run-release-debug'
 );
 
 /**

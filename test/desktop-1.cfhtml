@@ -1,81 +1,82 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-
-<script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'xblox','location':'../../lib/xblox'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile'},{'name':'xwire','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xwire'},{'name':'delite','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/delite'},{'name':'deliteful','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/deliteful'},{'name':'decor','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/decor'},{'name':'dpointer','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/dpointer'},{'name':'dcl','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/dcl'},{'name':'requirejs-dplugins','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-dplugins'},{'name':'requirejs-domready','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-domready'},{'name':'requirejs-text','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-text'},{'name':'jquery','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/jquery'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
-<script type="text/javascript">
-
-
-
-require([
-  "dijit/dijit",
-  "dojo/parser",
-  "maqetta/space",
-  "maqetta/AppStates",
-  "dijit/form/Button",
-  "dijit/form/DropDownButton",
-  "dijit/Menu",
-  "dijit/MenuItem",
-  "dijit/form/VerticalSlider",
-  "dijit/form/VerticalRule",
-  "dijit/form/VerticalRuleLabels",
-  "dijit/form/NumberSpinner",
-  "dijit/layout/ContentPane",
-  "dijit/form/ComboButton",
-  "dijit/form/HorizontalSlider",
-  "dijit/form/HorizontalRule",
-  "dijit/form/HorizontalRuleLabels",
-  "dijit/form/ComboBox",
-  "clipart/Twitter",
-  "dijit/form/DateTextBox",
-  "dijit/form/ToggleButton",
-  "dijit/layout/TabContainer",
-  "dijit/MenuBar",
-  "dijit/PopupMenuBarItem"
-]);
-</script>
-
-<style>
-    @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/claro/document.css";
-    @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/claro/claro.css";
-    @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/jquery/blitzer/jquery-ui.css";
-
-</style>
-
-</head>
-
-
-<body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" id="myapp">
- <script type="text/javascript">
-		 var xide_variables ={
-
-		 };
-	</script>
-
-   <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button" iconClass="dijitNoIcon" style="position: absolute; left: 88.19054985046387px; top: 343px;"></input>
-   <div data-dojo-type="dijit/form/HorizontalSlider" value="55.67041704361366" intermediateChanges="false" showButtons="false" maximum="98" discreteValues="Infinity" style="padding: 1em; position: absolute; height: auto; width: 246px; left: 43px; top: 251px;">
-     <div data-dojo-type="dijit/form/HorizontalRule" count="5" container="bottomDecoration" style="height: 5px;"></div>
-     <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" labels="0%,50%,100%" style="height: 20px;"></ol>
-   </div>
-   <select data-dojo-type="dijit/form/ComboBox" value="Item 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" pageSize="Infinity" searchDelay="200" style="position: absolute; width: 121px; left: 24.5px; top: 114.5px;">
-     <option value="Item 1">
-       test</option>
-     <option value="Item 2">
-       Item 2</option>
-     <option value="Item 3">
-       Item 3</option>
-   </select>
-   <div style="position: absolute; background-color: black; width: 134px; height: 70px; left: 24.5px; top: 165px;"></div>
-   <div style="position: absolute; width: 243px; height: 52.75px; left: 25.833328247070312px; top: 41.15px;">
-
- <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 105.05000740234374px; top: 12.666676103515627px;" onclick="alert('helo')"></input>
-     <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="ButtonX" iconClass="dijitNoIcon" style="position: absolute; left: 22.00000435058594px; top: 12.666676103515627px;"></input>
-   </div>
- <span data-dojo-type="dijit/MenuBar" popupDelay="0" tabIndex="0" style="position: absolute; left: 23px; top: 392px;"><span data-dojo-type="dijit/PopupMenuBarItem" label="Menu 1" iconClass="dijitNoIcon"><span data-dojo-type="dijit/Menu"><span data-dojo-type="dijit/MenuItem" label="Menu Item 1.1"></span><span data-dojo-type="dijit/MenuItem" label="Menu Item 1.2"></span>
-   </span>
-   </span><span data-dojo-type="dijit/PopupMenuBarItem" label="Menu 2" iconClass="dijitNoIcon"><span data-dojo-type="dijit/Menu"><span data-dojo-type="dijit/MenuItem" label="Menu Item 2.1"></span><span data-dojo-type="dijit/MenuItem" label="Menu Item 2.2"></span>
-   </span>
-   </span>
-   </span></body></html>
+        <html>
+        
+        <head>
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+          <script type="text/javascript" src="http://192.168.1.37/projects/xbox-app//client/src/lib/dojo/dojo.js" data-dojo-config="'tlmSiblingOfDojo':0,'baseUrl':'http://192.168.1.37/projects/xbox-app//client/src/lib/dojo','parseOnLoad':true,'async':true,'packages':[{'name':'gridx','location':'../../lib/dojo/gridx'},{'name':'clipart','location':'../../lib/clipart'},{'name':'xide','location':'../../lib/xide'},{'name':'xblox','location':'../../lib/xblox'},{'name':'maqettaSamples','location':'../../samples'},{'name':'maqetta','location':'../../lib/maqetta'},{'name':'shapes','location':'../../lib/shapes'},{'name':'widgets','location':'../../WebContent/lib/custom'},{'name':'xapp','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xapp'},{'name':'dijit','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dijit'},{'name':'dojox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dojox'},{'name':'xblox','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xblox'},{'name':'dstore','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//dstore'},{'name':'xide','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xide'},{'name':'xfile','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xfile'},{'name':'xwire','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//xwire'},{'name':'delite','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/delite'},{'name':'deliteful','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/deliteful'},{'name':'decor','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/decor'},{'name':'dpointer','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/dpointer'},{'name':'dcl','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/dcl'},{'name':'requirejs-dplugins','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-dplugins'},{'name':'requirejs-domready','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-domready'},{'name':'requirejs-text','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/requirejs-text'},{'name':'jquery','location':'http://192.168.1.37/projects/xbox-app//client/src/lib//ibm-js/jquery'}],'themeMap':[['Android','',['themes/android/android.css']],['BlackBerry','',['themes/blackberry/blackberry.css']],['iPad','',['themes/ipad/ipad.css']],['iPhone','',['themes/iphone/iphone.css']],['.*','',['themes/iphone/iphone.css']]],'mblThemeFiles':[],'mblLoadCompatPattern':''"></script>
+          <script type="text/javascript">
+            require([
+              "dijit/dijit",
+              "dojo/parser",
+              "maqetta/space",
+              "maqetta/AppStates",
+              "dijit/form/Button",
+              "dijit/form/DropDownButton",
+              "dijit/Menu",
+              "dijit/MenuItem",
+              "dijit/form/VerticalSlider",
+              "dijit/form/VerticalRule",
+              "dijit/form/VerticalRuleLabels",
+              "dijit/form/NumberSpinner",
+              "dijit/layout/ContentPane",
+              "dijit/form/ComboButton",
+              "dijit/form/HorizontalSlider",
+              "dijit/form/HorizontalRule",
+              "dijit/form/HorizontalRuleLabels",
+              "dijit/form/ComboBox",
+              "clipart/Twitter",
+              "dijit/form/DateTextBox",
+              "dijit/form/ToggleButton",
+              "dijit/layout/TabContainer",
+              "dijit/MenuBar",
+              "dijit/PopupMenuBarItem"
+            ]);
+          </script>
+        
+          <style>
+            @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/claro/document.css";
+            @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/claro/claro.css";
+            @import "%%XIDEVE_LIB_ROOT%%/dijit/themes/jquery/blitzer/jquery-ui.css";
+          </style>
+        
+        </head>
+        
+        
+        <body data-maq-flow-layout="false" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" id="myapp">
+          <script type="text/javascript">
+            var xide_variables = {
+        
+            };
+          </script>
+        
+          <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button" iconClass="dijitNoIcon" style="position: absolute; left: 88.19054985046387px; top: 343px;"></input>
+          <div data-dojo-type="dijit/form/HorizontalSlider" value="55.67041704361366" intermediateChanges="false" showButtons="false" maximum="98" discreteValues="Infinity" style="padding: 1em; position: absolute; height: auto; width: 246px; left: 43px; top: 251px;">
+            <div data-dojo-type="dijit/form/HorizontalRule" count="5" container="bottomDecoration" style="height: 5px;"></div>
+            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" labels="0%,50%,100%" style="height: 20px;"></ol>
+          </div>
+          <select data-dojo-type="dijit/form/ComboBox" value="Item 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" pageSize="Infinity" searchDelay="200" style="position: absolute; width: 121px; left: 24.5px; top: 114.5px;">
+            <option value="Item 1">
+              test</option>
+            <option value="Item 2">
+              Item 2</option>
+            <option value="Item 3">
+              Item 3</option>
+          </select>
+          <div style="position: absolute; background-color: black; width: 134px; height: 70px; left: 24.5px; top: 165px;"></div>
+          <div style="position: absolute; width: 243px; height: 52.75px; left: 25.833328247070312px; top: 41.15px;">
+        
+            <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="Button2" iconClass="dijitNoIcon" style="position: absolute; left: 105.05000740234374px; top: 12.666676103515627px;" onclick="alert('helo')"></input>
+            <input type="button" data-dojo-type="dijit/form/Button" intermediateChanges="false" label="ButtonX" iconClass="dijitNoIcon" style="position: absolute; left: 22.00000435058594px; top: 12.666676103515627px;"></input>
+          </div>
+          <span data-dojo-type="dijit/MenuBar" popupDelay="0" tabIndex="0" style="position: absolute; left: 23px; top: 392px;"><span data-dojo-type="dijit/PopupMenuBarItem" label="Menu 1" iconClass="dijitNoIcon"><span data-dojo-type="dijit/Menu"><span data-dojo-type="dijit/MenuItem" label="Menu Item 1.1"></span>
+          <span data-dojo-type="dijit/MenuItem" label="Menu Item 1.2"></span>
+          </span>
+          </span><span data-dojo-type="dijit/PopupMenuBarItem" label="Menu 2" iconClass="dijitNoIcon"><span data-dojo-type="dijit/Menu"><span data-dojo-type="dijit/MenuItem" label="Menu Item 2.1"></span><span data-dojo-type="dijit/MenuItem" label="Menu Item 2.2"></span>
+          </span>
+          </span>
+          </span>
+        </body>
+        
+        </html>
