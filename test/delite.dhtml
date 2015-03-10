@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-  			<html>
-  			
-  			<head>
-  			  <meta charset="utf-8" />
-  			  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  			  <script type="text/javascript">
+     <html>
+
+     <head>
+       <meta charset="utf-8"/>
+       <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+       <script type="text/javascript">
   			    require([
   			      "delite/register",
   			      "deliteful/Button",
@@ -16,15 +16,15 @@
   			      "deliteful/Switch"
   			    ]);
   			  </script>
-  			  <style>
-  			  </style>
-  			
-  			
-  			</head>
-  			
-  			<body data-maq-flow-layout="false" data-maq-comptype="delite" class="claro" data-maq-ws="collapse" id="myapp" data-maq-appstates="{}">
-  			
-  			  <script type="text/javascript">
+       <style>
+       </style>
+
+
+     </head>
+
+     <body data-maq-flow-layout="false" data-maq-comptype="delite" class="claro" data-maq-ws="collapse" id="myapp" data-maq-appstates="{}">
+
+       <script type="text/javascript">
   			    
   			    var xideveSettings = {
   			      xbloxScripts: [{
@@ -35,14 +35,14 @@
   			    };
   			    
   			  </script>
-  			
-  			
-  			  <button is="d-button" label="On" id="Power Off" title="Default Label" style="color: white;" class="d-button-success"></button>
-  			  <button is="d-button" label="Off" title="Default Label" style="left: 49.83332824707031px; top: 0px;" class="d-button-danger">
-  			  </button>
-  			  <d-slider value="0">
-  			    <input value=","></input>
-  			  </d-slider>
-  			</body>
-  			
-  			</html>
+
+
+       <button is="d-button" label="On" id="Power Off" title="Default Label" style="color: white;" class="d-button-success"></button>
+       <button is="d-button" label="Off" title="Default Label" style="left: 49.83332824707031px; top: 0px; width: 80.75px;" class="d-button-danger">
+       </button>
+       <d-slider value="0">
+         <input value=","></input>
+       </d-slider>
+     </body>
+
+     </html>
