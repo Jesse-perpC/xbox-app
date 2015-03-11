@@ -17,7 +17,7 @@ require (dirname(__FILE__) . DIRECTORY_SEPARATOR . '_base.php');
 /**
  * Override file repository root
  */
-//$XF_PATH = '/home/mc007/Desktop/';
+//$XF_PATH = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
 
 
