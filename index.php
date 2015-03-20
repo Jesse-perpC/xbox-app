@@ -133,7 +133,7 @@ const XF_DIR_OPTION_SHOW_FOLDER_SIZE    =1634;  //only for Linux with popen and 
 $XAPP_SALT_KEY       =  'k?Ur$0aE#9j1+7ui';     //Salt key to sign and verify client calls
 
 // allowed upload extensions. this is also used when renaming files
-$XF_ALLOWED_UPLOAD_EXTENSIONS = 'sh,php,js,css,less,bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,mp3,xblox,cfhtml';
+$XF_ALLOWED_UPLOAD_EXTENSIONS = 'sh,php,js,css,less,bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,mp3,xblox,cfhtml,tar,zip';
 
 
 /***************************************************************************
