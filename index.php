@@ -298,8 +298,11 @@ $XF_CONFIG = array(
 /*25*/  1,  //add mount
 /*26*/  1,  //remove mount
 /*27*/  1,  //edit mount
-/*28*/  1   //perspective
-
+/*28*/  1,   //perspective
+/*29*/  1,  //CLIPBOARD_COPY
+/*30*/  1,  //CLIPBOARD_CUT
+/*31*/  1,  //CLIPBOARD_PASTE
+/*32*/  1,  //EXTRACT
 	),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
 		"LAYOUT" => XF_PANEL_MODE_LIST, //when using tree, its target is then the main panel

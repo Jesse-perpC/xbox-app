@@ -154,7 +154,11 @@ $XF_CONFIG = array(
 /*25*/  0,  //add mount
 /*26*/  0,  //remove mount
 /*27*/  0,  //edit mount
-/*28*/  0   //perspective
+/*28*/  0,   //perspective
+/*29*/  1,  //CLIPBOARD_COPY
+/*30*/  1,  //CLIPBOARD_CUT
+/*31*/  1,  //CLIPBOARD_PASTE
+/*32*/  1,  //EXTRACT
 
 ),
 	"FILE_PANEL_OPTIONS_LEFT" => array( //left panel
