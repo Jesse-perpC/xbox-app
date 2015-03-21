@@ -118,10 +118,25 @@ rm -rfv "$DIST/xapp/conf.inc.release.php"
 rm -rfv "$DIST/xapp/conf.inc.release.wp.php"
 rm -rfv "$DIST/xapp/conf.joomla.php"
 
+rm -rfv "$DIST/xapp/RpcOri_"
+rm -rfv "$DIST/xapp/Directory/tests"
+rm -rfv "$DIST/xapp/Directory/test"
+rm -rfv "$DIST/xapp/Image/test"
+rm -rfv "$DIST/xapp/xide/backup"
+rm -rfv "$DIST/xapp/xide/cmd"
+
+
 rm -rfv "$DIST/xapp/commander/plugins/Zoho"
+rm -rfv "$DIST/xapp/commander/plugins/youtube_download"
 rm -rfv "$DIST/xapp/commander/plugins/LESS"
 rm -rfv "$DIST/xapp/commander/plugins/HTMLEditor"
 rm -rfv "$DIST/xapp/commander/plugins/SVN"
+
+rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/node_modules"
+rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/assets/js/editor"
+rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/assets/js/vendor"
+rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/assets/less"
+
 
 rm -rfv "$DIST/xapp/commander/plugins/youtube_download"
 
@@ -182,6 +197,7 @@ rm -rfv "$DIST/xapp/includes.php"
 rm -rfv "$DIST/xapp/ISchemaProcessor.php"
 
 
+rm -rf "$DIST/client/src/xfile/xwordpress"
 rm -rfv "$DIST/client/src/xfile/xwordpress"
 rm -rf "$DIST/client/src/xfile/dojo/dojowp.js"
 rm -rf "$DIST/client/src/xfileBuild/"
