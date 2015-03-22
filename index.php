@@ -196,6 +196,12 @@ $XAPP_COMPONENTS = array(
 	'xnode' =>XApp_Service_Utils::_getKey('xnode',false)
 );
 
+
+$XAPP_RESOURCE_CONFIG = XApp_Service_Utils::_getKey("resourceConfig","resources-debug");
+
+
+
+
 /**
  * Define extra variables for client rendering. This array will override existing variables (see xapp/commander/App near '$XAPP_RELATIVE_VARIABLES')
  * The resource variables go into the the client side resource manager 'xide.manager.ResourceManager'
@@ -229,8 +235,15 @@ $XF_RESOURCE_VARIABLES                  = array(
 	 */
 	'ACTION_BUTTON_SIZE'        => XApp_Service_Entry_Utils::isMobile() ? '1.5em' : '1.3em',
 
+	/**
+	 * Package config (Dojo-Package paths)
+	 */
+	'PACKAGE_CONFIG'            => 'run-release-debug',
 
-	'PACKAGE_CONFIG'            => 'run-release-debug'
+	/**
+	 * CDN Host
+	 */
+	'CDN_URL'            => 'http://pearls-media.com/cdn/xbox-app/'
 
 );
 
@@ -359,7 +372,8 @@ $commanderStruct = xapp_commander_render_standalone(
     $XAPP_SALT_KEY,
     $XF_PROHIBITED_PLUGINS,
     $XF_RESOURCE_VARIABLES,
-    $XAPP_COMPONENTS
+    $XAPP_COMPONENTS,
+	$XAPP_RESOURCE_CONFIG
 );
 /**
  * Punch it Scotty!

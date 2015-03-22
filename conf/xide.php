@@ -37,7 +37,7 @@ $XF_PATH = '/PMaster/projects/xbox-app/test/';
 /****************************************************************************/
 
 // prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
-$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell,XImageEdit,XZoho,XHTMLEditor,XSVN,XLESS');
+$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell,XZoho,XHTMLEditor,XSVN,XLESS');
 
 
 //jQuery theme, append the url by &theme=dot-luv ! You can choose from :
