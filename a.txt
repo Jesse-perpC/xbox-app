@@ -1,0 +1,36 @@
+$TTL 86400
+@   IN SOA ns1.first-ns.de. postmaster.robot.first-ns.de. (
+    2014112000   ; serial
+    14400        ; refresh
+    1800         ; retry
+    604800       ; expire
+    86400 )      ; minimum
+
+@                        IN NS      ns1.first-ns.de.
+@                        IN NS      robotns2.second-ns.de.
+@                        IN NS      robotns3.second-ns.com.
+
+@                        IN A       188.40.81.209
+cdn                      IN A       188.40.81.209
+cm                       IN A       178.63.34.114
+hosting                  IN A       5.35.251.15
+hosting2                 IN A       5.35.251.15
+localhost                IN A       127.0.0.1
+mail                     IN A       144.76.12.122
+s15355725                IN A       144.76.12.122
+www                      IN A       188.40.81.209
+xbox                     IN A       5.35.251.15
+autodiscover             IN CNAME   s15355725
+ftp                      IN CNAME   www
+imap                     IN CNAME   s15355725
+loopback                 IN CNAME   localhost
+pop                      IN CNAME   s15355725
+relay                    IN CNAME   s15355725
+smtp                     IN CNAME   144.76.12.122
+@                        IN MX 10   s15355725
+@                        IN MX 20   ALT2.ASPMX.L.GOOGLE.COM.
+@                        IN MX 20   ALT1.ASPMX.L.GOOGLE.COM.
+@                        IN MX 30   ASPMX5.GOOGLEMAIL.COM.
+@                        IN MX 30   ASPMX4.GOOGLEMAIL.COM.
+@                        IN MX 30   ASPMX3.GOOGLEMAIL.COM.
+@                        IN MX 30   ASPMX2.GOOGLEMAIL.COM.

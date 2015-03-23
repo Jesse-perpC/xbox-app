@@ -196,11 +196,10 @@ $XAPP_COMPONENTS = array(
 	'xnode' =>XApp_Service_Utils::_getKey('xnode',false)
 );
 
-
-$XAPP_RESOURCE_CONFIG = XApp_Service_Utils::_getKey("resourceConfig","resources-debug");
-
-
-
+/**
+ *
+ */
+$XAPP_RESOURCE_CONFIG = XApp_Service_Utils::_getKey("resourceConfig",'');
 
 /**
  * Define extra variables for client rendering. This array will override existing variables (see xapp/commander/App near '$XAPP_RELATIVE_VARIABLES')
@@ -377,39 +376,5 @@ $commanderStruct = xapp_commander_render_standalone(
 );
 /**
  * Punch it Scotty!
- *
  */
 $commanderStruct['bootstrap']->handleRequest();
-
-
-
-/////////////////////////////////////////////////////////////////
-//
-//  Url parameter helpers
-//
-/////////////////////////////////////////////////////////////////
-/**
- * Sanitizes a string key.
- *
- * Keys are used as internal identifiers. Lowercase & uppercase alphanumeric characters, dashes, comma and underscores are allowed.
- *
- * @param string $key String key
- * @return string Sanitized key
- */
-function _sanitize_key( $key ) {
-	return preg_replace( '/[^A-Za-z0-9_\-]/', '', $key );
-}
-
-/**
- * Return a _GET key but sanitized
- * @param $key
- * @param $default
- * @return string
- */
-function _getKey($key,$default){
-
-	if(isset($_GET[$key])){
-		return _sanitize_key($_GET[$key]);
-	}
-	return $default;
-}
