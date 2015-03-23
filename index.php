@@ -196,6 +196,7 @@ $XAPP_COMPONENTS = array(
 	'xnode' =>XApp_Service_Utils::_getKey('xnode',false)
 );
 
+
 /**
  *
  */
