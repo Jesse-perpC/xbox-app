@@ -243,7 +243,7 @@ $XF_RESOURCE_VARIABLES                  = array(
 	/**
 	 * CDN Host
 	 */
-	'CDN_URL'            => 'http://pearls-media.com/cdn/xbox-app/'
+	'CDN_URL'            => 'http://www.x4dojo.org/xbox-app/'
 
 );
 

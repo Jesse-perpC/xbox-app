@@ -125,6 +125,7 @@ rm -rfv "$DIST/xapp/Image/test"
 rm -rfv "$DIST/xapp/xide/backup"
 rm -rfv "$DIST/xapp/xide/cmd"
 
+rm -rfv "$DIST/xapp/commander/plugins/build"
 
 rm -rfv "$DIST/xapp/commander/plugins/Zoho"
 rm -rfv "$DIST/xapp/commander/plugins/youtube_download"
@@ -132,6 +133,7 @@ rm -rfv "$DIST/xapp/commander/plugins/LESS"
 rm -rfv "$DIST/xapp/commander/plugins/HTMLEditor"
 rm -rfv "$DIST/xapp/commander/plugins/SVN"
 
+rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile-release"
 rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/node_modules"
 rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/assets/js/editor"
 rm -rfv "$DIST/xapp/commander/plugins/ImageEdit/client/xfile/pixie/assets/js/vendor"

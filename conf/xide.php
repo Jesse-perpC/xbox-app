@@ -37,7 +37,7 @@ $XF_PATH = '/PMaster/projects/xbox-app/test/';
 /****************************************************************************/
 
 // prohibited plugins, comma separated : 'XShell,XImageEdit,XZoho,XHTMLEditor,XSandbox,XSVN,XLESS'
-$XF_PROHIBITED_PLUGINS = _getKey('disabledPlugins','XShell,XZoho,XHTMLEditor,XSVN,XLESS');
+$XF_PROHIBITED_PLUGINS = XApp_Service_Utils::_getKey('disabledPlugins','XShell,XZoho,XHTMLEditor,XSVN,XLESS');
 
 
 //jQuery theme, append the url by &theme=dot-luv ! You can choose from :
@@ -85,7 +85,12 @@ $XF_RESOURCE_VARIABLES                  = array(
 	//
 	'ACTION_BUTTON_SIZE'        =>'1.3em',
 
-	'PACKAGE_CONFIG'            => 'run-release-debug'
+	'PACKAGE_CONFIG'            => 'run-release-debug',
+
+	/**
+	 * CDN Host
+	 */
+	'CDN_URL'            => 'http://www.x4dojo.org/xbox-app/'
 );
 
 /**
@@ -175,6 +180,6 @@ $XF_CONFIG = array(
 	)
 );
 
-$XF_THEME = _getKey('theme','minimal');
+$XF_THEME = XApp_Service_Utils::_getKey('theme','minimal');
 
 
