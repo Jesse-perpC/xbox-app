@@ -17,6 +17,7 @@ rm -rf "$DIST/experiments"
 
 rm -rf "$DIST/user"
 rm -rf "$DIST/client/.idea"
+rm -rf "$DIST/client/dflat-theme"
 
 rm -rf "$DIST/experiments"
 rm -rf "$DIST/references"
