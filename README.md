@@ -105,6 +105,7 @@ This a development version. It has many sub modules and needs around 1 GB on the
 7. Delete the install.php from your server!
 
 ### Usage
+
 Navigate on your web server to : **http://localhost/xbox-app/index.php**
 
 Open in different layout modes, append the entry URL by: 
