@@ -180,7 +180,7 @@ $XF_PROHIBITED_PLUGINS = XApp_Service_Utils::_getKey('disabledPlugins','XSVN,XLE
  * trontastic,ui-darkness,ui-lightness,vader
  * see http://jqueryui.com/themeroller/ for more!
  */
-$XF_THEME = XApp_Service_Utils::_getKey('theme','blitzer');
+$XF_THEME = XApp_Service_Utils::_getKey('theme','dflat');
 
 /**
  * $XAPP_COMPONENTS describes the components to be loaded.
