@@ -23,6 +23,8 @@ PHP/JS based and full featured file manager
  - Strong security using signed client call similar to oauth. You can limit the access to IP and domains
  - Thumb resizing and caching for fast browsing large image folders
  - quite some stuff which i am too lazy to write down
+
+
  
 ## Additional components
 
